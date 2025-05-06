@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Association - Empowering Communities Together</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+</head>
+<body class="bg-gray-50">
+<!-- Header & Navigation -->
+<header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#" class="nav-link active-nav text-gray-800 font-medium hover:text-primary transition-colors">Home</a>
+<a href="#events" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Events</a>
+<a href="#gallery" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Gallery</a>
+<a href="#blog" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Blog</a>
+<a href="#sponsors" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Sponsors</a>
+</nav>
+
+<div class="flex items-center space-x-4">
+   <!-- 
+<button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Join Us</button>
+-->
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+
+</div>
+<!-- Mobile Navigation -->
+<div class="md:hidden hidden bg-white absolute w-full left-0 top-full shadow-md" id="mobile-menu">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+<a href="#" class="text-gray-800 font-medium py-2 border-b border-gray-100">Home</a>
+<a href="#events" class="text-gray-800 font-medium py-2 border-b border-gray-100">Events</a>
+<a href="#gallery" class="text-gray-800 font-medium py-2 border-b border-gray-100">Gallery</a>
+<a href="#blog" class="text-gray-800 font-medium py-2 border-b border-gray-100">Blog</a>
+<a href="#sponsors" class="text-gray-800 font-medium py-2 border-b border-gray-100">Sponsors</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap self-start">Join Us</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section w-full h-[700px] mt-16 relative">
+<div class="hero-overlay absolute inset-0 flex items-center">
+<div class="container mx-auto px-4 w-full">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Empowering Communities Together</h1>
+<p class="text-lg text-gray-700 mb-8">We are dedicated to fostering connections, promoting growth, and creating positive impact through collaborative initiatives and community engagement.</p>
+<div class="flex flex-wrap gap-4">
+   
+<button class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Learn More</button>
+ <!--Learn More
+<button class="bg-white text-gray-800 border border-gray-300 px-8 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Join Our Communit</button>
+-->
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up">About Us</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+          We are a passionate organization committed to building bridges between individuals and communities by fostering trust, growth, and shared purpose.
+        </p>
+      </div>
+  
+      <!-- Image and Text Row -->
+      <div class="flex flex-col lg:flex-row items-stretch gap-12 mb-16">
+        <!-- Görsel alanı -->
+        <div class="lg:w-1/2" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
+               alt="Community Connection"
+               class="rounded-xl w-full h-full object-cover">
+        </div>
+      
+        <!-- Metin alanı -->
+        <div class="lg:w-1/2 flex flex-col justify-start bg-gray-50 rounded-xl" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="text-2xl font-bold text-primary mb-4 mt-0 px-0 pt-0 pl-7">Who We Are</h3>
+          
+          <div class="space-y-4 text-gray-700 px-8 pb-8">
+            <p>
+              We are a dynamic and purpose-driven organization made up of passionate leaders, committed volunteers, and forward-thinking changemakers. Our shared values are rooted in empathy, collaboration, and the unwavering belief that lasting change begins at the community level.
+            </p>
+            <p>
+              Since our inception, we have focused on building strong foundations of trust and mutual respect within the communities we serve. Our initiatives range from small, grassroots efforts to large-scale campaigns and events—each designed to meet real needs and spark long-term impact.
+            </p>
+            <p>
+              Our approach is both people-centered and action-oriented. We believe that education, empowerment, and access to resources are the keys to unlocking human potential.
+            </p>
+            <p>
+              At our core, we are more than just an organization—we are a growing movement driven by compassion and committed to shaping a better, more inclusive future for all.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+  
+      <!-- Vision & Mission -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div class="bg-white rounded-xl shadow-md p-8" data-aos="fade-up" data-aos-delay="100">
+          <h4 class="text-xl font-bold text-primary mb-4">Our Vision</h4>
+          <p class="text-gray-700">
+            To be a leading catalyst for social change where empowered individuals come together to build resilient, compassionate, and thriving communities.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-8" data-aos="fade-up" data-aos-delay="200">
+          <h4 class="text-xl font-bold text-primary mb-4">Our Mission</h4>
+          <p class="text-gray-700">
+            To provide accessible platforms, inclusive programs, and collaborative opportunities that foster personal growth, collective action, and lasting impact.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Impact Section -->
+      <div class="bg-primary rounded-xl text-white py-12 px-6 text-center shadow-md" data-aos="zoom-in">
+        <h4 class="text-2xl font-bold mb-4">Our Impact</h4>
+        <p class="max-w-3xl mx-auto mb-6">
+          With hundreds of volunteers, dozens of events, and countless lives touched, we’re proud to be a part of a growing movement that values empathy, education, and engagement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-8 mt-6">
+          <div class="text-center">
+            <h5 class="text-4xl font-bold">250+</h5>
+            <span class="block mt-2">Volunteers</span>
+          </div>
+          <div class="text-center">
+            <h5 class="text-4xl font-bold">50+</h5>
+            <span class="block mt-2">Events Hosted</span>
+          </div>
+          <div class="text-center">
+            <h5 class="text-4xl font-bold">10K+</h5>
+            <span class="block mt-2">People Reached</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Events Section -->
+<section id="events" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Our Events</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Discover our upcoming events and revisit the highlights from our past gatherings. Join us to connect, learn, and grow together.</p>
+</div>
+<div class="flex justify-center mb-8">
+<div class="inline-flex rounded-full bg-gray-100 p-1">
+    <button class="px-6 py-2 !rounded-full bg-primary text-white font-medium whitespace-nowrap">Upcoming Events</button>
+    <!--
+<button class="px-6 py-2 !rounded-full bg-primary text-white font-medium whitespace-nowrap">Upcoming Events</button>
+<button class="px-6 py-2 !rounded-full text-gray-700 font-medium whitespace-nowrap">Past Events</button>
+-->
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Event Card 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Professional%20networking%20event%20with%20diverse%20attendees%20in%20business%20attire%2C%20engaging%20in%20discussions%2C%20modern%20conference%20venue%20with%20professional%20lighting%2C%20people%20exchanging%20business%20cards%2C%20corporate%20atmosphere%2C%20high-quality%20professional%20photography&width=600&height=400&seq=2&orientation=landscape" alt="Annual Leadership Conference" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-primary mb-2">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</div>
+<span>May 15, 2025 • 9:00 AM - 5:00 PM</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Annual Leadership Conference</h3>
+<p class="text-gray-600 mb-4">Join industry leaders and experts for a day of inspiring talks, workshops, and networking opportunities focused on innovative leadership strategies.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-sm text-gray-500">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Grand Hotel Conference Center</span>
+</div>
+<!--
+<button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Register Now</button>
+-->
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20setting%20with%20small%20groups%20working%20together%20at%20round%20tables%2C%20facilitator%20guiding%20discussion%2C%20flip%20charts%20and%20presentation%20materials%20visible%2C%20bright%20modern%20training%20room%2C%20business%20casual%20attire%2C%20engaged%20participants%2C%20high-quality%20professional%20photography&width=600&height=400&seq=3&orientation=landscape" alt="Community Workshop Series" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-primary mb-2">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</div>
+<span>June 8, 2025 • 2:00 PM - 6:00 PM</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Community Workshop Series</h3>
+<p class="text-gray-600 mb-4">A hands-on workshop focused on community building strategies and collaborative problem-solving techniques for neighborhood leaders.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-sm text-gray-500">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Community Center</span>
+</div>
+<!--
+<button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Register Now</button>
+-->
+</div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Elegant%20charity%20gala%20with%20well-dressed%20attendees%2C%20beautifully%20decorated%20tables%20with%20floral%20centerpieces%2C%20soft%20ambient%20lighting%2C%20champagne%20glasses%2C%20auction%20items%20displayed%2C%20formal%20evening%20atmosphere%2C%20professional%20venue%20setting%2C%20high-quality%20professional%20photography&width=600&height=400&seq=4&orientation=landscape" alt="Annual Charity Gala" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-primary mb-2">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-calendar-line"></i>
+</div>
+<span>July 22, 2025 • 7:00 PM - 10:00 PM</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Annual Charity Gala</h3>
+<p class="text-gray-600 mb-4">An elegant evening of dining, entertainment, and fundraising to support our community initiatives and scholarship programs.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center text-sm text-gray-500">
+<div class="w-5 h-5 flex items-center justify-center mr-2">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Riverside Luxury Hotel</span>
+</div>
+<!--
+<button class="text-primary font-medium hover:text-blue-700 transition-colors whitespace-nowrap">Register Now</button>
+-->
+</div>
+</div>
+</div>
+</div>
+<!--
+<div class="text-center mt-12">
+<button class="bg-white text-gray-800 border border-gray-300 px-8 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">View All Events</button>
+</div>
+-->
+</div>
+</section>
+<!-- Gallery Section -->
+<section id="gallery" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Photo Gallery</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Explore moments from our events, workshops, and community activities through our curated collection of photographs.</p>
+</div>
+<div class="flex justify-center mb-8">
+<div class="inline-flex rounded-full bg-gray-100 p-1">
+<button class="px-6 py-2 !rounded-full bg-primary text-white font-medium whitespace-nowrap">All Photos</button>
+<!--
+<button class="px-6 py-2 !rounded-full text-gray-700 font-medium whitespace-nowrap">Events</button>
+<button class="px-6 py-2 !rounded-full text-gray-700 font-medium whitespace-nowrap">Workshops</button>
+<button class="px-6 py-2 !rounded-full text-gray-700 font-medium whitespace-nowrap">Community</button>
+-->
+</div>
+</div>
+<div class="gallery-grid">
+<!-- Gallery Item 1 -->
+<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=Professional%20networking%20event%20in%20a%20modern%20conference%20center%2C%20diverse%20group%20of%20business%20professionals%20engaged%20in%20meaningful%20discussions%2C%20elegant%20venue%20with%20contemporary%20architecture%2C%20warm%20lighting%2C%20business%20formal%20attire%2C%20high-quality%20professional%20photography&width=500&height=500&seq=27&orientation=squarish" alt="Networking Summit" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+<div class="p-4 text-white">
+<h3 class="font-semibold">Annual Conference Keynote</h3>
+<p class="text-sm">May 2024</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Interactive Workshop" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+<div class="p-4 text-white">
+<h3 class="font-semibold">Interactive Workshop</h3>
+<p class="text-sm">April 2024</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=Professional%20networking%20event%20with%20diverse%20group%20mingling%2C%20elegant%20venue%20with%20mood%20lighting%2C%20business%20casual%20attire%2C%20engaging%20conversations%2C%20high-quality%20professional%20photography&width=500&height=800&seq=21&orientation=portrait" alt="Networking Event" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+<div class="p-4 text-white">
+<h3 class="font-semibold">Networking Event</h3>
+<p class="text-sm">March 2024</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 4 -->
+<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=Professional%20award%20ceremony%20with%20elegant%20stage%20setup%2C%20award%20recipients%20celebrating%2C%20formal%20attire%2C%20celebratory%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=22&orientation=squarish" alt="Awards Ceremony" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+<div class="p-4 text-white">
+<h3 class="font-semibold">Awards Ceremony</h3>
+<p class="text-sm">February 2024</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 5 -->
+<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=Professional%20panel%20discussion%20with%20diverse%20experts%2C%20modern%20conference%20setting%2C%20engaged%20audience%2C%20professional%20lighting%2C%20high-quality%20professional%20photography&width=800&height=500&seq=23&orientation=landscape" alt="Expert Panel" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+<div class="p-4 text-white">
+<h3 class="font-semibold">Expert Panel</h3>
+<p class="text-sm">January 2024</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 6 -->
+<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=Professional%20charity%20gala%20event%2C%20elegant%20table%20settings%2C%20formal%20attire%2C%20sophisticated%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=24&orientation=squarish" alt="Charity Gala" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+<div class="p-4 text-white">
+<h3 class="font-semibold">Charity Gala</h3>
+<p class="text-sm">December 2023</p>
+</div>
+</div>
+</div>
+<!-- Gallery Item 7 -->
+<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
+<img src="https://readdy.ai/api/search-image?query=Professional%20community%20service%20event%2C%20volunteers%20working%20together%2C%20outdoor%20setting%2C%20teamwork%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=25&orientation=squarish" alt="Community Service" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+<div class="p-4 text-white">
+<h3 class="font-semibold">Community Service</h3>
+<p class="text-sm">November 2023</p>
+</div>
+</div>
+</div>
+
+
+</div>
+<!--
+<div class="text-center mt-12">
+<button class="bg-white text-gray-800 border border-gray-300 px-8 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Load More Photos</button>
+</div>
+-->
+</div>
+</section>
+<!-- Blog Section -->
+<section id="blog" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Latest News & Insights</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with our latest articles, news, and insights about our association's activities and industry trends.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+        <!-- Blog Card Template -->
+        <!-- Repeat for each blog -->
+  
+        <!-- CARD 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]">
+          <img src="assets/img/blog/news.jpeg" alt="Networking" class="h-[180px] w-full object-cover">
+          <div class="p-5 flex flex-col flex-grow">
+            <p class="text-xs text-blue-600 mb-2">April 28, 2025 • Professional Development</p>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">5 Networking Strategies That Actually Work</h3>
+            <p class="text-sm text-gray-600 flex-grow">Discover proven networking techniques that help professionals build meaningful connections.</p>
+            <div class="mt-4">
+              <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]">
+          <img src="assets/img/blog/news2.jpeg" alt="Conference" class="h-[180px] w-full object-cover">
+          <div class="p-5 flex flex-col flex-grow">
+            <p class="text-xs text-blue-600 mb-2">April 15, 2025 • Events</p>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">How to Get the Most from Our Annual Conference</h3>
+            <p class="text-sm text-gray-600 flex-grow">Maximize your learning and networking opportunities with these tips for attending our flagship event.</p>
+            <div class="mt-4">
+              <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD 3 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]">
+          <img src="assets/img/blog/news3.jpg" alt="Remote Teams" class="h-[180px] w-full object-cover">
+          <div class="p-5 flex flex-col flex-grow">
+            <p class="text-xs text-blue-600 mb-2">April 10, 2025 • Leadership</p>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Leading Remote Teams: Best Practices</h3>
+            <p class="text-sm text-gray-600 flex-grow">Explore how to effectively lead and engage remote teams with these proven leadership methods.</p>
+            <div class="mt-4">
+              <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD 4 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]">
+          <img src="assets/img/blog/news4.jpg" alt="Workshops" class="h-[180px] w-full object-cover">
+          <div class="p-5 flex flex-col flex-grow">
+            <p class="text-xs text-blue-600 mb-2">March 28, 2025 • Workshops</p>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Interactive Workshops You Shouldn’t Miss</h3>
+            <p class="text-sm text-gray-600 flex-grow">Join our upcoming workshops designed to build practical skills in real-world scenarios.</p>
+            <div class="mt-4">
+              <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD 5 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]">
+          <img src="assets/img/blog/news5.png" alt="Strategy Guide" class="h-[180px] w-full object-cover">
+          <div class="p-5 flex flex-col flex-grow">
+            <p class="text-xs text-blue-600 mb-2">March 20, 2025 • Strategy</p>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Future-Proof Your Career: A Strategic Guide</h3>
+            <p class="text-sm text-gray-600 flex-grow">Learn how to align your goals with emerging trends in your field for long-term success.</p>
+            <div class="mt-4">
+              <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- CARD 6 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]">
+          <img src="assets/img/blog/news6.jpg" alt="Panel Discussion" class="h-[180px] w-full object-cover">
+          <div class="p-5 flex flex-col flex-grow">
+            <p class="text-xs text-blue-600 mb-2">March 5, 2025 • Panel</p>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Insights from Our Latest Panel Discussion</h3>
+            <p class="text-sm text-gray-600 flex-grow">Experts shared perspectives on current industry challenges and future opportunities.</p>
+            <div class="mt-4">
+              <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- Bottom Button
+      <div class="text-center mt-12">
+        <button class="bg-white text-gray-800 border border-gray-300 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">View All Articles</button>
+      </div>
+       -->
+    </div>
+  </section>
+  
+<!-- Sponsors Section -->
+<section id="sponsors" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Sponsors</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We are grateful to our sponsors whose generous support makes our work possible.
+          Their partnership is essential to our mission and impact.
+        </p>
+      </div>
+  
+      <!-- Sponsor Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Sponsor Card -->
+        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center">
+          <div class="w-16 h-16 mx-auto mb-4 relative">
+            <i class="ri-building-4-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Global Innovations Inc.</h4>
+          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Leading technology solutions provider</p>
+        </div>
+  
+        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center">
+          <div class="w-16 h-16 mx-auto mb-4 relative">
+            <i class="ri-bank-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Metropolitan Financial</h4>
+          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Financial services leader</p>
+        </div>
+  
+        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center">
+          <div class="w-16 h-16 mx-auto mb-4 relative">
+            <i class="ri-store-2-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Riverside Retail</h4>
+          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Premium retail solutions</p>
+        </div>
+  
+        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center">
+          <div class="w-16 h-16 mx-auto mb-4 relative">
+            <i class="ri-building-2-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Summit Properties</h4>
+          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Real estate excellence</p>
+        </div>
+  
+        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center">
+          <div class="w-16 h-16 mx-auto mb-4 relative">
+            <i class="ri-briefcase-4-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Oakwood Consulting</h4>
+          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Business solutions</p>
+        </div>
+  
+        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center">
+          <div class="w-16 h-16 mx-auto mb-4 relative">
+            <i class="ri-paint-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Creative Design</h4>
+          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Creative excellence</p>
+        </div>
+      </div>
+  
+      <!-- Call to Action
+      <div class="mt-16 text-center bg-white rounded-lg shadow-md p-8">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Become a Sponsor</h3>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-6">
+          Join our community of sponsors and gain visibility while supporting our mission.
+          We offer various sponsorship packages designed to meet your organization's goals.
+        </p>
+        <button class="bg-blue-500 text-white px-8 py-3 rounded-md font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">
+          Learn About Sponsorship
+        </button>
+      </div>
+       -->
+    </div>
+
+  </section>
+  
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
+<p class="text-gray-400 mb-6">Empowering communities through collaboration, education, and advocacy since 2005.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+<i class="ri-twitter-x-fill"></i>
+</a>
+
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+<i class="ri-instagram-fill"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#events" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+<li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+<li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+<li><a href="#sponsors" class="text-gray-400 hover:text-white transition-colors">Sponsors</a></li>
+<!--
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Join Us</a></li>
+-->
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1 text-gray-400">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-400">123 Association Way<br>Suite 500<br>New York, NY 10001</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-3 text-gray-400">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-400">(212) 555-1234</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 flex items-center justify-center mr-3 text-gray-400">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">info@association.org</span>
+</li>
+</ul>
+</div>
+<!--
+<div>
+<h3 class="text-lg font-semibold mb-4">Subscribe</h3>
+<p class="text-gray-400 mb-4">Stay updated with our latest news and events.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-l-button border-none focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
+<button type="submit" class="bg-primary text-white px-4 py-2 !rounded-r-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+</div>
+-->
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Association. All rights reserved.</p>
+<div class="flex space-x-4 text-sm text-gray-500">
+<a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+<a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
+<a href="#" class="hover:text-gray-300 transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
