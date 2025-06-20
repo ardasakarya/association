@@ -25,6 +25,44 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateHeaderClass);
     updateHeaderClass();
     });
+
+
+ const sponsors = [
+    { name: "Logo 1", url: "#", img: "https://via.placeholder.com/100x40?text=L1" },
+    { name: "Logo 2", url: "#", img: "https://via.placeholder.com/100x40?text=L2" },
+    { name: "Logo 3", url: "#", img: "https://via.placeholder.com/100x40?text=L3" },
+    { name: "Logo 4", url: "#", img: "https://via.placeholder.com/100x40?text=L4" },
+    { name: "Logo 5", url: "#", img: "https://via.placeholder.com/100x40?text=L5" }
+  ];
+
+  const wrapper = document.getElementById('sponsor-list');
+  const template = document.getElementById('sponsor-template');
+
+  function createSponsor(sponsor) {
+    const clone = template.content.cloneNode(true);
+    const a = clone.querySelector("a");
+    a.href = sponsor.url;
+    const img = a.querySelector("img");
+    img.src = sponsor.img;
+    img.alt = sponsor.name;
+    a.querySelector("span").textContent = sponsor.name;
+    return clone;
+  }
+
+  for (let i = 0; i < 100; i++) {
+    sponsors.forEach(sponsor => {
+      wrapper.appendChild(createSponsor(sponsor));
+    });
+  }
+
+  const marquee = document.getElementById("sponsor-marquee");
+  marquee.addEventListener("mouseenter", () => {
+    marquee.classList.remove("animate-marquee-loop");
+  });
+  marquee.addEventListener("mouseleave", () => {
+    marquee.classList.add("animate-marquee-loop");
+  });
+    
     // Custom Checkbox Functionality
     document.addEventListener('DOMContentLoaded', function() {
     const customCheckboxes = document.querySelectorAll('.custom-checkbox');

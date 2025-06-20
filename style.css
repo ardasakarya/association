@@ -2,6 +2,19 @@
 body {
 font-family: 'Inter', sans-serif;
 }
+
+   @keyframes scrollMarquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee-loop {
+      animation: scrollMarquee 30s linear infinite;
+    }
 .hero-section {
 background-image: url('https://readdy.ai/api/search-image?query=Professional%20association%20gathering%20with%20diverse%20people%20networking%20in%20a%20modern%20conference%20hall%2C%20natural%20lighting%20coming%20through%20large%20windows%2C%20professional%20atmosphere%2C%20elegant%20decorations%2C%20people%20engaged%20in%20meaningful%20conversations%2C%20high-quality%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape');
 background-size: cover;
@@ -34,6 +47,12 @@ input[type="number"]::-webkit-outer-spin-button {
 -webkit-appearance: none;
 margin: 0;
 }
+
+
+
+
+
+
 .custom-checkbox {
 position: relative;
 display: inline-block;

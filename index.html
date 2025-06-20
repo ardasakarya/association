@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-50">
 <!-- Header & Navigation -->
@@ -50,23 +50,69 @@
 </div>
 </header>
 <!-- Hero Section -->
-<section class="hero-section w-full h-[700px] mt-16 relative">
-<div class="hero-overlay absolute inset-0 flex items-center">
-<div class="container mx-auto px-4 w-full">
-<div class="max-w-2xl">
-<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Empowering Communities Together</h1>
-<p class="text-lg text-gray-700 mb-8">We are dedicated to fostering connections, promoting growth, and creating positive impact through collaborative initiatives and community engagement.</p>
-<div class="flex flex-wrap gap-4">
-   
-<button class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Learn More</button>
- <!--Learn More
-<button class="bg-white text-gray-800 border border-gray-300 px-8 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Join Our Communit</button>
--->
-</div>
-</div>
-</div>
-</div>
+<section class="relative w-full h-[700px] bg-cover bg-center mt-16 overflow-hidden bg-[url('https://readdy.ai/api/search-image?query=Professional%20association%20gathering%20with%20diverse%20people%20networking%20in%20a%20modern%20conference%20hall%2C%20natural%20lighting%20coming%20through%20large%20windows%2C%20professional%20atmosphere%2C%20elegant%20decorations%2C%20people%20engaged%20in%20meaningful%20conversations%2C%20high-quality%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape')]">
+  <!-- Reklamlar: Mobilde alta iner -->
+   <div class="absolute inset-0 bg-black/50 backdrop-blur-[0.8px] z-0"></div>
+  <div class="absolute top-0 left-0 h-full w-[200px] bg-yellow-100 z-10 p-4 border-r border-yellow-300
+              hidden lg:flex flex-col items-center justify-center">
+    <div class="text-center">
+      <h3 class="font-bold text-xl text-yellow-800 mb-2">Reklam Alanı</h3>
+      <p class="text-sm text-yellow-700">Kampanya içeriği buraya gelir.</p>
+      <button class="mt-4 px-4 py-2 bg-yellow-500 text-white text-sm rounded hover:bg-yellow-600 transition">Detaylar</button>
+    </div>
+  </div>
+
+  <div class="absolute top-0 right-0 h-full w-[200px] bg-blue-100 z-10 p-4 border-l border-blue-300
+              hidden lg:flex flex-col items-center justify-center">
+    <div class="text-center">
+      <h3 class="font-bold text-xl text-blue-800 mb-2">Sponsorlu İçerik</h3>
+      <p class="text-sm text-blue-700">Video, görsel veya link eklenebilir.</p>
+      <button class="mt-4 px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 transition">İncele</button>
+    </div>
+  </div>
+
+  <!-- İçerik -->
+  <div class="absolute inset-0 flex items-center justify-start px-8 lg:pl-[220px] pr-[220px] text-white">
+    <div class="max-w-2xl">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Empowering Communities Together</h1>
+      <p class="text-lg mb-8">
+        We are dedicated to fostering connections, promoting growth, and creating positive impact through collaborative initiatives and community engagement.
+      </p>
+      <button class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">Learn More</button>
+    </div>
+  </div>
+
+  <!-- Mobilde reklamlar aşağıya iner -->
+  <div class="lg:hidden absolute bottom-0 left-0 right-0 flex flex-col md:flex-row justify-between gap-4 px-4 py-6 bg-white/90 backdrop-blur z-10">
+    <div class="bg-yellow-100 p-4 rounded border border-yellow-300 w-full md:w-1/2">
+      <h3 class="font-bold text-yellow-800">Reklam Alanı</h3>
+      <p class="text-sm text-yellow-700">Mobil görünüm için içerik.</p>
+    </div>
+    <div class="bg-blue-100 p-4 rounded border border-blue-300 w-full md:w-1/2">
+      <h3 class="font-bold text-blue-800">Sponsorlu İçerik</h3>
+      <p class="text-sm text-blue-700">Mobil sponsor açıklaması.</p>
+    </div>
+  </div>
+
+  <!-- Kayan Sponsorlar -->
+  <div class="absolute bottom-0 left-0 right-0 py-4 bg-white border-t border-gray-300 overflow-hidden">
+    <div class="relative w-full overflow-hidden">
+      <div id="sponsor-marquee" class="flex gap-12 w-[200%] animate-marquee-loop px-4">
+        <div class="flex gap-12" id="sponsor-list"></div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- Sponsor Template -->
+<template id="sponsor-template">
+  <a href="#" target="_blank" class="flex flex-col items-center gap-2 min-w-[120px] hover:grayscale-0 grayscale transition">
+    <img src="https://via.placeholder.com/100x40?text=Icon" class="h-10" alt="Sponsor Icon" />
+    <span class="text-xs text-gray-500">Sponsor Adı</span>
+  </a>
+</template>
+
+
 
 
 <!-- About Section -->
@@ -108,7 +154,20 @@
           </div>
         </div>
       </div>
-      
+      <!-- Dernek Tarihçesi -->
+<div class="bg-white rounded-xl shadow-md p-8 mb-16" data-aos="fade-up" data-aos-delay="300">
+  <h4 class="text-2xl font-bold text-primary mb-4">Dernek Tarihçesi</h4>
+  <p class="text-gray-700 mb-4">
+    Derneğimiz, 2010 yılında bir grup gönüllü ve topluluk liderinin bir araya gelerek daha güçlü, daha bilinçli bir toplum oluşturma hayaliyle kuruldu. Kuruluş sürecinde toplumsal farkındalık, eşitlik ve dayanışma ilkeleri temel alınmıştır.
+  </p>
+  <p class="text-gray-700 mb-4">
+    İlk yıllarında küçük çaplı etkinliklerle topluma katkı sağlayan derneğimiz, zamanla hem yerel hem de ulusal düzeyde etkisini artırarak büyük projelere imza atmıştır. Eğitime erişim, kadın hakları, gençlik gelişimi ve sosyal adalet alanlarında çeşitli programlar geliştirilmiş ve uygulanmıştır.
+  </p>
+  <p class="text-gray-700">
+    Bugün, derneğimiz faaliyetlerini sürdürülebilirlik ve kapsayıcılık ilkeleriyle genişletmekte; toplumu güçlendiren yenilikçi çözümler üretmeye devam etmektedir. Geçmişten gelen değerleri geleceğe taşıyarak, daha adil bir dünya için çalışmayı sürdürmekteyiz.
+  </p>
+</div>
+
       
       
   
@@ -456,7 +515,90 @@
        -->
     </div>
   </section>
-  
+<section class="bg-gray-50 py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-16">Yönetim Kurulu</h2>
+
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+      <!-- Sol Yardımcı -->
+      <div class="relative group w-72 h-[400px] bg-white border border-gray-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="luthfi-alfarizi-jlJpDBK17Hw-unsplash.jpg" alt="Yardımcı 1"
+             class="w-full h-full object-cover group-hover:brightness-75 transition duration-500">
+        <div class="absolute bottom-0 left-0 w-full bg-black/70 text-white px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-lg font-semibold">Mehmet Kaya</h3>
+          <p class="text-sm text-gray-200">Başkan Yardımcısı</p>
+        </div>
+      </div>
+
+      <!-- Başkan Ortada -->
+      <div class="relative group w-80 h-[450px] bg-white border-4 border-blue-500 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
+        <img src="luthfi-alfarizi-0piYmLeSgTQ-unsplash.jpg" alt="Başkan"
+             class="w-full h-full object-cover group-hover:brightness-75 transition duration-500">
+        <div class="absolute bottom-0 left-0 w-full bg-blue-800/80 text-white px-6 py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-xl font-bold">Ahmet Yılmaz</h3>
+          <p class="text-sm text-gray-200">Yönetim Kurulu Başkanı</p>
+        </div>
+      </div>
+
+      <!-- Sağ Yardımcı -->
+      <div class="relative group w-72 h-[400px] bg-white border border-gray-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img src="luthfi-alfarizi-yXAGGbVuhEY-unsplash.jpg" alt="Yardımcı 2"
+             class="w-full h-full object-cover group-hover:brightness-75 transition duration-500">
+        <div class="absolute bottom-0 left-0 w-full bg-black/70 text-white px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+          <h3 class="text-lg font-semibold">Ayşe Koç</h3>
+          <p class="text-sm text-gray-200">Genel Sekreter</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-gradient-to-b from-gray-50 to-white py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-gray-800 mb-4" data-aos="fade-down">📘 Dernek Tüzüğü</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-down" data-aos-delay="100">
+        Derneğimizin yapısını, işleyişini ve misyonunu tanımlayan resmi tüzüğü aşağıdan inceleyebilir ya da cihazınıza indirebilirsiniz.
+      </p>
+    </div>
+
+    <!-- Kart Tasarımı -->
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-10 flex flex-col md:flex-row items-center gap-8 border border-gray-200" data-aos="zoom-in">
+      <!-- Sol Görsel -->
+      <div class="w-full md:w-1/3">
+        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Tüzük İkonu"
+             class="w-32 h-32 mx-auto md:mx-0 object-contain grayscale hover:grayscale-0 transition duration-300">
+      </div>
+
+      <!-- Sağ İçerik -->
+      <div class="w-full md:w-2/3 text-center md:text-left">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tüzük Belgesi</h3>
+        <p class="text-gray-600 mb-6">
+          Tüzüğümüz, dernek üyelerinin haklarını ve yükümlülüklerini belirlerken, şeffaf ve demokratik bir yapı sunar. Detaylı bilgiye aşağıdaki butonlardan ulaşabilirsiniz.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="tuzuk.pdf" target="_blank"
+             class="flex items-center gap-2 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+                 d="M15 12H9m12 0A9 9 0 1 1 3 12a9 9 0 0 1 18 0Z"/></svg>
+            PDF Görüntüle
+          </a>
+          <a href="tuzuk.pdf" download
+             class="flex items-center gap-2 px-5 py-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+                 d="M4 16v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1M12 12v6m0 0l3-3m-3 3l-3-3m0-6V4h6v4"/></svg>
+            PDF İndir
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- Sponsors Section -->
 <section id="sponsors" class="py-20 bg-white">
     <div class="container mx-auto px-4">
