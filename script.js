@@ -106,3 +106,10 @@ const sponsors = [
     });
     });
     });
+
+
+     AOS.init({
+    duration: 800,
+    // her zaman animasyonun olmaması için 
+    // once: true, 
+  });
