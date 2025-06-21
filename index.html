@@ -50,11 +50,12 @@
 </div>
 </header>
 <!-- Hero Section -->
-<section class="relative w-full h-[700px] bg-cover bg-center mt-16 overflow-hidden bg-[url('https://readdy.ai/api/search-image?query=Professional%20association%20gathering%20with%20diverse%20people%20networking%20in%20a%20modern%20conference%20hall%2C%20natural%20lighting%20coming%20through%20large%20windows%2C%20professional%20atmosphere%2C%20elegant%20decorations%2C%20people%20engaged%20in%20meaningful%20conversations%2C%20high-quality%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape')]">
-  <!-- Reklamlar: Mobilde alta iner -->
-   <div class="absolute inset-0 bg-black/50 backdrop-blur-[0.8px] z-0"></div>
-  <div class="absolute top-0 left-0 h-full w-[200px] bg-yellow-100 z-10 p-4 border-r border-yellow-300
-              hidden lg:flex flex-col items-center justify-center">
+<section class="relative w-full min-h-[700px] bg-cover bg-center mt-16 overflow-hidden bg-[url('https://readdy.ai/api/search-image?query=Professional%20association%20gathering%20with%20diverse%20people%20networking%20in%20a%20modern%20conference%20hall%2C%20natural%20lighting%20coming%20through%20large%20windows%2C%20professional%20atmosphere%2C%20elegant%20decorations%2C%20people%20engaged%20in%20meaningful%20conversations%2C%20high-quality%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape')]">
+  <!-- Arka Plan Karartma -->
+  <div class="absolute inset-0 bg-black/30 backdrop-blur-[0.8px] z-0"></div>
+
+  <!-- Sol Reklam -->
+  <div class="absolute top-0 left-0 h-full w-[200px] bg-yellow-100 z-10 p-4 border-r border-yellow-300 hidden lg:flex flex-col items-center justify-center">
     <div class="text-center">
       <h3 class="font-bold text-xl text-yellow-800 mb-2">Reklam Alanı</h3>
       <p class="text-sm text-yellow-700">Kampanya içeriği buraya gelir.</p>
@@ -62,8 +63,8 @@
     </div>
   </div>
 
-  <div class="absolute top-0 right-0 h-full w-[200px] bg-blue-100 z-10 p-4 border-l border-blue-300
-              hidden lg:flex flex-col items-center justify-center">
+  <!-- Sağ Reklam -->
+  <div class="absolute top-0 right-0 h-full w-[200px] bg-blue-100 z-10 p-4 border-l border-blue-300 hidden lg:flex flex-col items-center justify-center">
     <div class="text-center">
       <h3 class="font-bold text-xl text-blue-800 mb-2">Sponsorlu İçerik</h3>
       <p class="text-sm text-blue-700">Video, görsel veya link eklenebilir.</p>
@@ -71,18 +72,18 @@
     </div>
   </div>
 
-  <!-- İçerik -->
-  <div class="absolute inset-0 flex items-center justify-start px-8 lg:pl-[220px] pr-[220px] text-white">
+  <!-- Ana İçerik -->
+  <div class="relative z-10 flex items-center justify-center min-h-[700px] px-4 sm:px-8 lg:pl-[220px] lg:pr-[220px] text-white text-center">
     <div class="max-w-2xl">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Empowering Communities Together</h1>
-      <p class="text-lg mb-8">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Empowering Communities Together</h1>
+      <p class="text-base sm:text-lg mb-6 sm:mb-8">
         We are dedicated to fostering connections, promoting growth, and creating positive impact through collaborative initiatives and community engagement.
       </p>
       <button class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">Learn More</button>
     </div>
   </div>
 
-  <!-- Mobilde reklamlar aşağıya iner -->
+  <!-- Mobil Reklamlar -->
   <div class="lg:hidden absolute bottom-0 left-0 right-0 flex flex-col md:flex-row justify-between gap-4 px-4 py-6 bg-white/90 backdrop-blur z-10">
     <div class="bg-yellow-100 p-4 rounded border border-yellow-300 w-full md:w-1/2">
       <h3 class="font-bold text-yellow-800">Reklam Alanı</h3>
@@ -93,6 +94,8 @@
       <p class="text-sm text-blue-700">Mobil sponsor açıklaması.</p>
     </div>
   </div>
+</section>
+
 
   <!-- Kayan Sponsorlar -->
   <div class="absolute bottom-0 left-0 right-0 py-4 bg-white border-t border-gray-300 overflow-hidden">
@@ -106,8 +109,8 @@
 
 <!-- Sponsor Template -->
 <template id="sponsor-template">
-  <a href="#" target="_blank" class="flex flex-col items-center gap-2 min-w-[120px] hover:grayscale-0 grayscale transition">
-    <img src="https://via.placeholder.com/100x40?text=Icon" class="h-10" alt="Sponsor Icon" />
+  <a href="#" target="_blank" class="flex flex-col items-center gap-2 min-w-[160px] hover:grayscale-0 grayscale transition">
+    <img src="https://via.placeholder.com/100x40?text=Icon" class="h-16" alt="Sponsor Icon" />
     <span class="text-xs text-gray-500">Sponsor Adı</span>
   </a>
 </template>
@@ -116,15 +119,14 @@
 
 
 <!-- About Section -->
-<section id="about" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up">About Us</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
-          We are a passionate organization committed to building bridges between individuals and communities by fostering trust, growth, and shared purpose.
-        </p>
-      </div>
-  
+<section id="about" class="mt-20 py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4" data-aos="fade-up">About Us</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        We are a passionate organization committed to building bridges between individuals and communities by fostering trust, growth, and shared purpose.
+      </p>
+    </div>
       <!-- Image and Text Row -->
       <div class="flex flex-col lg:flex-row items-stretch gap-12 mb-16">
         <!-- Görsel alanı -->
@@ -320,102 +322,117 @@
 </section>
 <!-- Gallery Section -->
 <section id="gallery" class="py-20 bg-gray-50">
-<div class="container mx-auto px-4">
-<div class="text-center mb-12">
-<h2 class="text-3xl font-bold text-gray-900 mb-3">Photo Gallery</h2>
-<p class="text-gray-600 max-w-2xl mx-auto">Explore moments from our events, workshops, and community activities through our curated collection of photographs.</p>
-</div>
-<div class="flex justify-center mb-8">
-<div class="inline-flex rounded-full bg-gray-100 p-1">
-<button class="px-6 py-2 !rounded-full bg-primary text-white font-medium whitespace-nowrap">All Photos</button>
-<!--
-<button class="px-6 py-2 !rounded-full text-gray-700 font-medium whitespace-nowrap">Events</button>
-<button class="px-6 py-2 !rounded-full text-gray-700 font-medium whitespace-nowrap">Workshops</button>
-<button class="px-6 py-2 !rounded-full text-gray-700 font-medium whitespace-nowrap">Community</button>
--->
-</div>
-</div>
-<div class="gallery-grid">
-<!-- Gallery Item 1 -->
-<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
-<img src="https://readdy.ai/api/search-image?query=Professional%20networking%20event%20in%20a%20modern%20conference%20center%2C%20diverse%20group%20of%20business%20professionals%20engaged%20in%20meaningful%20discussions%2C%20elegant%20venue%20with%20contemporary%20architecture%2C%20warm%20lighting%2C%20business%20formal%20attire%2C%20high-quality%20professional%20photography&width=500&height=500&seq=27&orientation=squarish" alt="Networking Summit" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-<div class="p-4 text-white">
-<h3 class="font-semibold">Annual Conference Keynote</h3>
-<p class="text-sm">May 2024</p>
-</div>
-</div>
-</div>
-<!-- Gallery Item 2 -->
-<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
-<img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Interactive Workshop" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-<div class="p-4 text-white">
-<h3 class="font-semibold">Interactive Workshop</h3>
-<p class="text-sm">April 2024</p>
-</div>
-</div>
-</div>
-<!-- Gallery Item 3 -->
-<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
-<img src="https://readdy.ai/api/search-image?query=Professional%20networking%20event%20with%20diverse%20group%20mingling%2C%20elegant%20venue%20with%20mood%20lighting%2C%20business%20casual%20attire%2C%20engaging%20conversations%2C%20high-quality%20professional%20photography&width=500&height=800&seq=21&orientation=portrait" alt="Networking Event" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-<div class="p-4 text-white">
-<h3 class="font-semibold">Networking Event</h3>
-<p class="text-sm">March 2024</p>
-</div>
-</div>
-</div>
-<!-- Gallery Item 4 -->
-<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
-<img src="https://readdy.ai/api/search-image?query=Professional%20award%20ceremony%20with%20elegant%20stage%20setup%2C%20award%20recipients%20celebrating%2C%20formal%20attire%2C%20celebratory%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=22&orientation=squarish" alt="Awards Ceremony" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-<div class="p-4 text-white">
-<h3 class="font-semibold">Awards Ceremony</h3>
-<p class="text-sm">February 2024</p>
-</div>
-</div>
-</div>
-<!-- Gallery Item 5 -->
-<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
-<img src="https://readdy.ai/api/search-image?query=Professional%20panel%20discussion%20with%20diverse%20experts%2C%20modern%20conference%20setting%2C%20engaged%20audience%2C%20professional%20lighting%2C%20high-quality%20professional%20photography&width=800&height=500&seq=23&orientation=landscape" alt="Expert Panel" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-<div class="p-4 text-white">
-<h3 class="font-semibold">Expert Panel</h3>
-<p class="text-sm">January 2024</p>
-</div>
-</div>
-</div>
-<!-- Gallery Item 6 -->
-<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
-<img src="https://readdy.ai/api/search-image?query=Professional%20charity%20gala%20event%2C%20elegant%20table%20settings%2C%20formal%20attire%2C%20sophisticated%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=24&orientation=squarish" alt="Charity Gala" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-<div class="p-4 text-white">
-<h3 class="font-semibold">Charity Gala</h3>
-<p class="text-sm">December 2023</p>
-</div>
-</div>
-</div>
-<!-- Gallery Item 7 -->
-<div class="gallery-item overflow-hidden rounded-lg shadow-md relative group">
-<img src="https://readdy.ai/api/search-image?query=Professional%20community%20service%20event%2C%20volunteers%20working%20together%2C%20outdoor%20setting%2C%20teamwork%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=25&orientation=squarish" alt="Community Service" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110">
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-<div class="p-4 text-white">
-<h3 class="font-semibold">Community Service</h3>
-<p class="text-sm">November 2023</p>
-</div>
-</div>
-</div>
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-3">Photo Gallery</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Explore moments from our events, workshops, and community activities through our curated collection of photographs.
+      </p>
+    </div>
 
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-screen-lg mx-auto">
+      <!-- Gallery Item 1 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Networking Summit</h3>
+            <p>May 2024</p>
+          </div>
+        </div>
+      </div>
 
-</div>
-<!--
-<div class="text-center mt-12">
-<button class="bg-white text-gray-800 border border-gray-300 px-8 py-3 !rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Load More Photos</button>
-</div>
--->
-</div>
+      <!-- Gallery Item 2 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Interactive Workshop</h3>
+            <p>April 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 3 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Event" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Networking Event</h3>
+            <p>March 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 4 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Awards" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Awards Ceremony</h3>
+            <p>Feb 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 5 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Panel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Expert Panel</h3>
+            <p>Jan 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 6 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Gala" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Charity Gala</h3>
+            <p>Dec 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 7 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Community Service" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Community Service</h3>
+            <p>Nov 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 8 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Leadership Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Leadership Training</h3>
+            <p>Oct 2023</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery Item 9 -->
+      <div class="overflow-hidden rounded-lg shadow relative group aspect-square">
+        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Team Building" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+          <div class="p-3 text-white text-sm">
+            <h3 class="font-semibold">Team Building</h3>
+            <p>Sep 2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- Blog Section -->
 <section id="blog" class="py-20 bg-white">
     <div class="container mx-auto px-4">

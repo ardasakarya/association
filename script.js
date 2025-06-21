@@ -27,42 +27,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
- const sponsors = [
-    { name: "Logo 1", url: "#", img: "https://via.placeholder.com/100x40?text=L1" },
-    { name: "Logo 2", url: "#", img: "https://via.placeholder.com/100x40?text=L2" },
-    { name: "Logo 3", url: "#", img: "https://via.placeholder.com/100x40?text=L3" },
-    { name: "Logo 4", url: "#", img: "https://via.placeholder.com/100x40?text=L4" },
-    { name: "Logo 5", url: "#", img: "https://via.placeholder.com/100x40?text=L5" }
+const sponsors = [
+    { url: "#", img: "assets/sponsor_img/6103f09c1b09300004095b34.png", name: "" },
+    { url: "#", img: "assets/sponsor_img/584290baa6515b1e0ad75ac2.png", name: "" },
+    { url: "#", img: "assets/sponsor_img/5906045a0cbeef0acff9a639.png", name: "" },
+    { url: "#", img: "assets/sponsor_img/61362684f5966900044cbf73.png", name: "" },
+    { url: "#", img: "assets/sponsor_img/golden-logo-template-free-png.webp", name: "" }
   ];
 
   const wrapper = document.getElementById('sponsor-list');
-  const template = document.getElementById('sponsor-template');
 
-  function createSponsor(sponsor) {
-    const clone = template.content.cloneNode(true);
-    const a = clone.querySelector("a");
-    a.href = sponsor.url;
-    const img = a.querySelector("img");
-    img.src = sponsor.img;
-    img.alt = sponsor.name;
-    a.querySelector("span").textContent = sponsor.name;
-    return clone;
-  }
-
-  for (let i = 0; i < 100; i++) {
+  // Sponsorları çoğaltarak liste oluştur (smooth loop için)
+  for (let i = 0; i < 100; i++) {  // 20 kez çoğalt, ihtiyaç varsa artır
     sponsors.forEach(sponsor => {
-      wrapper.appendChild(createSponsor(sponsor));
+      const a = document.createElement('a');
+      a.href = sponsor.url;
+      a.target = "_blank";
+      a.className = "flex flex-col items-center gap-2 min-w-[160px] grayscale hover:grayscale-0 transition";
+
+      const img = document.createElement('img');
+      img.src = sponsor.img;
+      img.alt = sponsor.name;
+      img.className = "h-16";
+
+      const span = document.createElement('span');
+      span.className = "text-xs text-gray-500";
+      span.textContent = sponsor.name;
+
+      a.appendChild(img);
+      a.appendChild(span);
+      wrapper.appendChild(a);
     });
   }
 
+  let pos = 0; // scroll pozisyonu
+  let requestId;
+  const speed = 1; // kaydırma hızı (px/frame)
   const marquee = document.getElementById("sponsor-marquee");
+  const totalWidth = wrapper.scrollWidth / 2; // yarısı (çünkü içerik 2 kez çoğaltıldı)
+
+  function step() {
+    pos += speed;
+    if (pos >= totalWidth) pos = 0;  // loop başa dön
+    wrapper.style.transform = `translateX(${-pos}px)`;
+    requestId = requestAnimationFrame(step);
+  }
+
+  // Animasyon başlat
+  step();
+
+  // Mouse üzerine gelince durdur, çıkınca devam ettir
   marquee.addEventListener("mouseenter", () => {
-    marquee.classList.remove("animate-marquee-loop");
+    cancelAnimationFrame(requestId);
   });
+
   marquee.addEventListener("mouseleave", () => {
-    marquee.classList.add("animate-marquee-loop");
+    requestId = requestAnimationFrame(step);
   });
-    
     // Custom Checkbox Functionality
     document.addEventListener('DOMContentLoaded', function() {
     const customCheckboxes = document.querySelectorAll('.custom-checkbox');
