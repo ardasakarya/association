@@ -1,6 +1,10 @@
 :where([class^="ri-"])::before { content: "\f3c2"; }
 body {
 font-family: 'Inter', sans-serif;
+
+}
+html, body {
+  overflow-x: hidden;
 }
 
    @keyframes scrollMarquee {
