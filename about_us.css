@@ -1,0 +1,76 @@
+ :where([class^="ri-"])::before { content: "\f3c2"; }
+
+
+body {
+font-family: 'Inter', sans-serif;
+
+}
+html, body {
+  overflow-x: hidden;
+}
+
+   @keyframes scrollMarquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee-loop {
+      animation: scrollMarquee 30s linear infinite;
+    }
+
+
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #3b82f6;
+transition: width 0.3s;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.active-nav::after {
+width: 100%;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+        .hero-bg {
+            background-image: url('https://readdy.ai/api/search-image?query=Professional%20business%20conference%20room%20with%20modern%20architecture%2C%20people%20collaborating%20in%20bright%20corporate%20environment%2C%20clean%20minimalist%20design%2C%20natural%20lighting%20through%20large%20windows%2C%20contemporary%20office%20space%20with%20glass%20walls%20and%20wooden%20accents%2C%20professional%20atmosphere&width=1920&height=800&seq=hero001&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3B82F6, #10B981);
+            transform: translateX(-50%);
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            background: #3B82F6;
+            border: 4px solid white;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
