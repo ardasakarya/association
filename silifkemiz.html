@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenwich District - Historic Maritime Borough</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#8B5CF6'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+        .timeline-line {
+            position: relative;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3B82F6, #8B5CF6);
+        }
+        .timeline-item {
+            position: relative;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 1.5rem;
+            top: 1.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: #3B82F6;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 1.5rem;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        @media (max-width: 640px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+        .hero-bg {
+            background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20aerial%20view%20of%20Greenwich%20district%20London%20with%20historic%20buildings%2C%20River%20Thames%2C%20maritime%20architecture%2C%20Royal%20Observatory%2C%20green%20parks%2C%20elegant%20Georgian%20buildings%2C%20clear%20blue%20sky%2C%20professional%20photography%2C%20architectural%20landmark%2C%20urban%20landscape%2C%20historic%20town%20center&width=1920&height=800&seq=hero-bg&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-8">
+                    <div class="text-2xl font-['Pacifico'] text-primary">logo</div>
+                    <div class="hidden md:flex space-x-6">
+                        <a href="#overview" class="text-gray-700 hover:text-primary transition-colors">Overview</a>
+                        <a href="#history" class="text-gray-700 hover:text-primary transition-colors">History</a>
+                        <a href="#location" class="text-gray-700 hover:text-primary transition-colors">Location</a>
+                        <a href="#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
+                        <a href="#gallery" class="text-gray-700 hover:text-primary transition-colors">Gallery</a>
+                    </div>
+                </div>
+                <button class="md:hidden w-8 h-8 flex items-center justify-center">
+                    <i class="ri-menu-line text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg min-h-screen flex items-center relative">
+        <div class="overlay absolute inset-0"></div>
+        <div class="relative z-10 w-full">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-3xl">
+                    <nav class="text-white/80 text-sm mb-6">
+                        <span>Home</span> <i class="ri-arrow-right-s-line mx-2"></i> <span>Districts</span> <i class="ri-arrow-right-s-line mx-2"></i> <span class="text-white">Greenwich</span>
+                    </nav>
+                    <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">Greenwich</h1>
+                    <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">Where time begins and maritime history comes alive in London's most prestigious borough</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="bg-primary hover:bg-blue-600 text-white px-8 py-4 !rounded-button font-semibold transition-colors whitespace-nowrap">
+                            Explore District
+                        </button>
+                        <button class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 !rounded-button font-semibold transition-colors whitespace-nowrap">
+                            View Map
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">District Overview</h2>
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Greenwich stands as one of London's most historically significant and culturally rich districts, renowned worldwide as the home of Greenwich Mean Time and the Prime Meridian. This UNESCO World Heritage Site seamlessly blends maritime heritage with royal history, creating an unparalleled destination that attracts millions of visitors annually.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Located in Southeast London along the Thames, Greenwich offers a unique combination of historic architecture, world-class museums, expansive parklands, and vibrant community life. From the iconic Cutty Sark to the Royal Observatory, every corner tells a story of Britain's naval supremacy and scientific advancement.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Today, Greenwich continues to thrive as both a residential haven and tourist destination, maintaining its historic character while embracing modern amenities and sustainable development practices.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Quick Facts</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-group-line text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Population</div>
+                                <div class="text-gray-600">289,254</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-map-2-line text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Area</div>
+                                <div class="text-gray-600">47.35 km²</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-calendar-line text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Established</div>
+                                <div class="text-gray-600">1965 (Borough)</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-navigation-line text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Coordinates</div>
+                                <div class="text-gray-600">51.4934°N, 0.0098°E</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-temp-cold-line text-primary"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-gray-900">Climate</div>
+                                <div class="text-gray-600">Temperate Maritime</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-4 bg-white rounded-xl">
+                        <div class="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+                            <div class="bg-white/90 px-4 py-2 rounded-lg">
+                                <div class="text-sm font-semibold text-gray-900">Interactive Map</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Historical Timeline</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover the rich history that shaped Greenwich from a royal residence to a world heritage site</p>
+            </div>
+            <div class="timeline-line max-w-4xl mx-auto">
+                <div class="timeline-item pl-16 pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <img src="https://readdy.ai/api/search-image?query=Medieval%20Greenwich%20Palace%20royal%20residence%20Thames%20riverside%20historic%20architecture%20Tudor%20period%20England%20ancient%20buildings%20stone%20construction%20royal%20court&width=300&height=200&seq=medieval-palace&orientation=landscape" alt="Medieval Greenwich" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="text-primary font-bold text-lg mb-2">1427</div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Greenwich Palace Founded</h3>
+                                <p class="text-gray-700">Duke Humphrey of Gloucester builds Bella Court, later becoming Greenwich Palace. This riverside location becomes a favored royal residence, setting the foundation for Greenwich's royal connections.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item pl-16 pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <img src="https://readdy.ai/api/search-image?query=Tudor%20Greenwich%20Palace%20Henry%20VIII%20Elizabeth%20I%20royal%20court%20Renaissance%20architecture%20Thames%20waterfront%20historic%20royal%20residence%20English%20monarchy&width=300&height=200&seq=tudor-palace&orientation=landscape" alt="Tudor Greenwich" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="text-primary font-bold text-lg mb-2">1491-1603</div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Tudor Royal Residence</h3>
+                                <p class="text-gray-700">Greenwich Palace becomes the birthplace of Henry VIII and Elizabeth I. The palace serves as a primary royal residence during the Tudor period, hosting elaborate court ceremonies and diplomatic events.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item pl-16 pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <img src="https://readdy.ai/api/search-image?query=Royal%20Naval%20College%20Greenwich%20Christopher%20Wren%20baroque%20architecture%20twin%20buildings%20Thames%20riverside%20naval%20education%20maritime%20heritage%20classical%20columns&width=300&height=200&seq=naval-college&orientation=landscape" alt="Royal Naval College" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="text-primary font-bold text-lg mb-2">1696</div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Royal Naval College Established</h3>
+                                <p class="text-gray-700">Christopher Wren designs the Royal Naval College on the site of the old palace. This magnificent baroque complex becomes the training ground for Britain's naval officers, cementing Greenwich's maritime legacy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item pl-16 pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <img src="https://readdy.ai/api/search-image?query=Royal%20Observatory%20Greenwich%20telescope%20astronomy%20Prime%20Meridian%20line%20scientific%20instruments%20Christopher%20Wren%20architecture%20hilltop%20location%20Greenwich%20Park&width=300&height=200&seq=observatory&orientation=landscape" alt="Royal Observatory" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="text-primary font-bold text-lg mb-2">1675</div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Royal Observatory Founded</h3>
+                                <p class="text-gray-700">Charles II establishes the Royal Observatory to solve the longitude problem for navigation. This scientific institution becomes the center of astronomical research and timekeeping, eventually defining the Prime Meridian.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item pl-16 pb-12">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <img src="https://readdy.ai/api/search-image?query=Greenwich%20Mean%20Time%20Prime%20Meridian%20line%20zero%20longitude%20international%20time%20standard%20world%20time%20zones%20astronomical%20measurement%20scientific%20achievement&width=300&height=200&seq=gmt&orientation=landscape" alt="Greenwich Mean Time" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="text-primary font-bold text-lg mb-2">1884</div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">Greenwich Mean Time Adopted</h3>
+                                <p class="text-gray-700">The International Meridian Conference establishes Greenwich as the Prime Meridian (0° longitude), making Greenwich Mean Time the world's time standard and putting Greenwich at the center of global timekeeping.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item pl-16">
+                    <div class="timeline-dot"></div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3">
+                                <img src="https://readdy.ai/api/search-image?query=Greenwich%20UNESCO%20World%20Heritage%20Site%20maritime%20Greenwich%20historic%20buildings%20Royal%20Naval%20College%20Cutty%20Sark%20preservation%20cultural%20heritage%20recognition&width=300&height=200&seq=unesco&orientation=landscape" alt="UNESCO World Heritage" class="w-full h-48 object-cover rounded-lg">
+                            </div>
+                            <div class="md:w-2/3">
+                                <div class="text-primary font-bold text-lg mb-2">1997</div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-3">UNESCO World Heritage Status</h3>
+                                <p class="text-gray-700">Maritime Greenwich receives UNESCO World Heritage designation, recognizing its outstanding universal value and exceptional ensemble of historic buildings representing British naval and maritime history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Location & Geography</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Strategically positioned on the Thames, Greenwich offers unparalleled connectivity and natural beauty</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Strategic Thames Location</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Greenwich sits majestically on the south bank of the River Thames, approximately 5.5 miles southeast of central London. This prime riverside location has been crucial to its development as a maritime center and royal residence throughout history.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Geographic Features</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                        <i class="ri-water-line text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900">Thames Frontage</div>
+                                        <div class="text-gray-600">2.5 miles of prime riverfront with historic piers and modern developments</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                        <i class="ri-mountain-line text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900">Greenwich Hill</div>
+                                        <div class="text-gray-600">Elevated position offering panoramic views across London</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-6 h-6 flex items-center justify-center bg-primary/10 rounded-full mt-1">
+                                        <i class="ri-leaf-line text-primary text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900">Greenwich Park</div>
+                                        <div class="text-gray-600">183 acres of Royal Park with ancient trees and wildlife</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Transportation Hub</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="font-semibold text-gray-900 mb-2">Rail Connections</div>
+                                    <div class="text-sm text-gray-600">National Rail, DLR, London Underground</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="font-semibold text-gray-900 mb-2">River Services</div>
+                                    <div class="text-sm text-gray-600">Thames Clipper, Tourist Boats</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="font-semibold text-gray-900 mb-2">Road Access</div>
+                                    <div class="text-sm text-gray-600">A2, A20, Blackwall Tunnel</div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <div class="font-semibold text-gray-900 mb-2">Cycling</div>
+                                    <div class="text-sm text-gray-600">National Cycle Network</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-gray-100 rounded-2xl p-8">
+                        <div class="w-full h-96 bg-gray-200 rounded-xl flex items-center justify-center mb-6" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;">
+                            <div class="bg-white/90 px-6 py-3 rounded-lg">
+                                <div class="font-semibold text-gray-900">Interactive District Map</div>
+                                <div class="text-sm text-gray-600">Click to explore boundaries and landmarks</div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-gray-900">Neighboring Areas</h4>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="text-sm">
+                                    <div class="font-semibold text-gray-900">North</div>
+                                    <div class="text-gray-600">Isle of Dogs, Canary Wharf</div>
+                                </div>
+                                <div class="text-sm">
+                                    <div class="font-semibold text-gray-900">East</div>
+                                    <div class="text-gray-600">Woolwich, Thamesmead</div>
+                                </div>
+                                <div class="text-sm">
+                                    <div class="font-semibold text-gray-900">South</div>
+                                    <div class="text-gray-600">Blackheath, Lewisham</div>
+                                </div>
+                                <div class="text-sm">
+                                    <div class="font-semibold text-gray-900">West</div>
+                                    <div class="text-gray-600">Deptford, New Cross</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Notable Features</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover what makes Greenwich a world-renowned destination for culture, education, and recreation</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=Cutty%20Sark%20ship%20Greenwich%20maritime%20museum%20historic%20tea%20clipper%20sailing%20vessel%20Thames%20riverside%20museum%20display%20naval%20heritage%20preservation&width=400&height=250&seq=cutty-sark&orientation=landscape" alt="Cutty Sark" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-ship-line text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Maritime Heritage</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Home to the legendary Cutty Sark and National Maritime Museum, showcasing Britain's naval supremacy and maritime exploration history.</p>
+                        <div class="text-sm text-primary font-semibold">Historic Ships • Naval Artifacts • Maritime Stories</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=University%20of%20Greenwich%20campus%20modern%20education%20buildings%20academic%20architecture%20students%20learning%20environment%20Thames%20waterfront%20university%20facilities%20contemporary%20design&width=400&height=250&seq=university&orientation=landscape" alt="University of Greenwich" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-school-line text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Educational Excellence</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">University of Greenwich and Trinity College of Music provide world-class education in historic settings, attracting students globally.</p>
+                        <div class="text-sm text-primary font-semibold">Higher Education • Research • International Students</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=Greenwich%20business%20district%20modern%20office%20buildings%20commercial%20development%20Thames%20waterfront%20corporate%20headquarters%20business%20park%20contemporary%20architecture&width=400&height=250&seq=business&orientation=landscape" alt="Business District" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-building-line text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Business Hub</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Thriving business district with modern offices, creative industries, and proximity to Canary Wharf financial center.</p>
+                        <div class="text-sm text-primary font-semibold">Corporate Offices • Creative Industries • Finance</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=Greenwich%20Park%20Royal%20Park%20London%20green%20spaces%20ancient%20trees%20deer%20wildlife%20Royal%20Observatory%20hill%20views%20recreational%20activities%20families%20walking&width=400&height=250&seq=park&orientation=landscape" alt="Greenwich Park" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-tree-line text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Royal Parks</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Greenwich Park offers 183 acres of ancient parkland with deer, rose gardens, and spectacular views across London.</p>
+                        <div class="text-sm text-primary font-semibold">Royal Park • Wildlife • Recreation • Views</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=Greenwich%20cultural%20attractions%20theaters%20museums%20galleries%20arts%20venues%20performance%20spaces%20cultural%20events%20community%20activities%20artistic%20heritage&width=400&height=250&seq=culture&orientation=landscape" alt="Cultural Attractions" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-palette-line text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Cultural Scene</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Rich cultural landscape with theaters, galleries, festivals, and events celebrating arts, music, and community heritage.</p>
+                        <div class="text-sm text-primary font-semibold">Arts • Theater • Festivals • Community Events</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://readdy.ai/api/search-image?query=Greenwich%20Market%20historic%20covered%20market%20local%20vendors%20artisan%20crafts%20food%20stalls%20shopping%20experience%20Victorian%20architecture%20community%20gathering&width=400&height=250&seq=market&orientation=landscape" alt="Greenwich Market" class="w-full h-48 object-cover object-top">
+                    <div class="p-6">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                                <i class="ri-store-line text-primary"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Historic Market</h3>
+                        </div>
+                        <p class="text-gray-700 mb-4">Greenwich Market has been trading since 1700s, offering artisan crafts, antiques, and international cuisine in Victorian surroundings.</p>
+                        <div class="text-sm text-primary font-semibold">Historic Market • Crafts • Food • Antiques</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Image Gallery</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore Greenwich through stunning photography showcasing its historic landmarks and natural beauty</p>
+            </div>
+            <div class="masonry-grid">
+                <div class="masonry-item">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+                        <img src="https://readdy.ai/api/search-image?query=Royal%20Observatory%20Greenwich%20historic%20building%20astronomy%20telescope%20Prime%20Meridian%20line%20Christopher%20Wren%20architecture%20hilltop%20location%20Greenwich%20Park%20panoramic%20views&width=400&height=300&seq=gallery-1&orientation=portrait" alt="Royal Observatory" class="w-full object-cover object-top">
+                        <div class="p-4">
+                            <div class="font-semibold text-gray-900">Royal Observatory</div>
+                            <div class="text-sm text-gray-600">Where time begins - home of Greenwich Mean Time</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+                        <img src="https://readdy.ai/api/search-image?query=Royal%20Naval%20College%20Greenwich%20twin%20baroque%20buildings%20Christopher%20Wren%20architecture%20Thames%20riverside%20historic%20naval%20education%20classical%20columns%20symmetrical%20design&width=400&height=250&seq=gallery-2&orientation=landscape" alt="Royal Naval College" class="w-full object-cover object-top">
+                        <div class="p-4">
+                            <div class="font-semibold text-gray-900">Royal Naval College</div>
+                            <div class="text-sm text-gray-600">Magnificent baroque architecture by Christopher Wren</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+                        <img src="https://readdy.ai/api/search-image?query=Thames%20view%20from%20Greenwich%20riverside%20panorama%20London%20skyline%20Canary%20Wharf%20skyscrapers%20river%20boats%20historic%20waterfront%20modern%20city%20ancient%20borough&width=400&height=350&seq=gallery-3&orientation=portrait" alt="Thames View" class="w-full object-cover object-top">
+                        <div class="p-4">
+                            <div class="font-semibold text-gray-900">Thames Panorama</div>
+                            <div class="text-sm text-gray-600">Spectacular views across London from Greenwich</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+                        <img src="https://readdy.ai/api/search-image?query=Greenwich%20Park%20ancient%20oak%20trees%20deer%20wildlife%20Royal%20Park%20London%20green%20space%20recreational%20activities%20families%20walking%20paths%20natural%20beauty&width=400&height=280&seq=gallery-4&orientation=landscape" alt="Greenwich Park" class="w-full object-cover object-top">
+                        <div class="p-4">
+                            <div class="font-semibold text-gray-900">Greenwich Park</div>
+                            <div class="text-sm text-gray-600">Ancient Royal Park with deer and centuries-old trees</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+                        <img src="https://readdy.ai/api/search-image?query=Greenwich%20Market%20Victorian%20covered%20market%20artisan%20stalls%20local%20vendors%20crafts%20food%20international%20cuisine%20historic%20trading%20community%20gathering&width=400&height=320&seq=gallery-5&orientation=portrait" alt="Greenwich Market" class="w-full object-cover object-top">
+                        <div class="p-4">
+                            <div class="font-semibold text-gray-900">Greenwich Market</div>
+                            <div class="text-sm text-gray-600">Historic market with artisan crafts and global cuisine</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+                        <img src="https://readdy.ai/api/search-image?query=Greenwich%20historic%20streets%20Georgian%20architecture%20period%20buildings%20cobblestone%20paths%20traditional%20English%20town%20center%20heritage%20preservation%20charming%20walkways&width=400&height=260&seq=gallery-6&orientation=landscape" alt="Historic Streets" class="w-full object-cover object-top">
+                        <div class="p-4">
+                            <div class="font-semibold text-gray-900">Historic Streets</div>
+                            <div class="text-sm text-gray-600">Charming Georgian architecture and cobbled lanes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="text-2xl font-['Pacifico'] text-primary mb-4">logo</div>
+                    <p class="text-gray-400 mb-6">Discover the historic maritime borough where time begins and heritage lives on.</p>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-facebook-fill"></i>
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-twitter-fill"></i>
+                        </div>
+                        <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors cursor-pointer">
+                            <i class="ri-instagram-fill"></i>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <div class="space-y-3">
+                        <a href="#overview" class="block text-gray-400 hover:text-white transition-colors">District Overview</a>
+                        <a href="#history" class="block text-gray-400 hover:text-white transition-colors">Historical Timeline</a>
+                        <a href="#location" class="block text-gray-400 hover:text-white transition-colors">Location & Geography</a>
+                        <a href="#features" class="block text-gray-400 hover:text-white transition-colors">Notable Features</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Visit Greenwich</h4>
+                    <div class="space-y-3">
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Tourist Information</a>
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Getting Here</a>
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Accommodation</a>
+                        <a href="#" class="block text-gray-400 hover:text-white transition-colors">Events Calendar</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact Information</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center mt-1">
+                                <i class="ri-map-pin-line text-primary text-sm"></i>
+                            </div>
+                            <div class="text-gray-400">
+                                Greenwich Borough Council<br>
+                                The Woolwich Centre<br>
+                                35 Wellington Street<br>
+                                London SE18 6HQ
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-5 h-5 flex items-center justify-center">
+                                <i class="ri-phone-line text-primary text-sm"></i>
+                            </div>
+                            <div class="text-gray-400">020 8854 8888</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2025 Greenwich District. All rights reserved. Last updated: January 2025
+                    </div>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Accessibility</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-primary hover:bg-blue-600 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <script id="navigation-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('nav');
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    nav.classList.add('shadow-lg');
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                } else {
+                    nav.classList.remove('shadow-lg');
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script id="smooth-scroll">
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        const offsetTop = targetElement.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script id="gallery-interaction">
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('#gallery .masonry-item > div');
+            
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    const title = this.querySelector('.font-semibold').textContent;
+                    
+                    const modal = document.createElement('div');
+                    modal.className = 'fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4';
+                    modal.innerHTML = `
+                        <div class="max-w-4xl w-full">
+                            <div class="flex justify-between items-center mb-4">
+                                <h3 class="text-white text-2xl font-bold">${title}</h3>
+                                <button class="text-white hover:text-gray-300 text-3xl">&times;</button>
+                            </div>
+                            <img src="${img.src}" alt="${img.alt}" class="w-full h-auto rounded-lg">
+                        </div>
+                    `;
+                    
+                    document.body.appendChild(modal);
+                    
+                    modal.addEventListener('click', function(e) {
+                        if (e.target === modal || e.target.tagName === 'BUTTON') {
+                            document.body.removeChild(modal);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
