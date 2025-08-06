@@ -34,9 +34,59 @@
         }
     </script>
     <style>
+
+
+
         :where([class^="ri-"])::before {
             content: "\f3c2";
         }
+body {
+font-family: 'Inter', sans-serif;
+
+}
+html, body {
+  overflow-x: hidden;
+}
+
+   @keyframes scrollMarquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee-loop {
+      animation: scrollMarquee 30s linear infinite;
+    }
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -2px;
+left: 0;
+background-color: #3b82f6;
+transition: width 0.3s;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.active-nav::after {
+width: 100%;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+
         .timeline-line {
             position: relative;
         }
@@ -93,34 +143,49 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-8">
-                    <div class="text-2xl font-['Pacifico'] text-primary">logo</div>
-                    <div class="hidden md:flex space-x-6">
-                        <a href="#overview" class="text-gray-700 hover:text-primary transition-colors">Overview</a>
-                        <a href="#history" class="text-gray-700 hover:text-primary transition-colors">History</a>
-                        <a href="#location" class="text-gray-700 hover:text-primary transition-colors">Location</a>
-                        <a href="#features" class="text-gray-700 hover:text-primary transition-colors">Features</a>
-                        <a href="#gallery" class="text-gray-700 hover:text-primary transition-colors">Gallery</a>
-                    </div>
-                </div>
-                <button class="md:hidden w-8 h-8 flex items-center justify-center">
-                    <i class="ri-menu-line text-xl"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+   <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#" class="nav-link active-nav text-gray-800 font-medium hover:text-primary transition-colors">Home</a>
+<a href="silifkemiz.html" class="nav-link  text-gray-800 font-medium hover:text-primary transition-colors">Silifkemiz</a>
+<a href="#events" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Events</a>
+<a href="#gallery" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Gallery</a>
+<a href="#blog" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Blog</a>
+<a href="#sponsors" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Sponsors</a>
+</nav>
+
+<div class="flex items-center space-x-4">
+   <!-- 
+<button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Join Us</button>
+-->
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+
+</div>
+<!-- Mobile Navigation -->
+<div class="md:hidden hidden bg-white absolute w-full left-0 top-full shadow-md" id="mobile-menu">
+<div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+<a href="#" class="text-gray-800 font-medium py-2 border-b border-gray-100">Home</a>
+<a href="silifkemiz.html" class="text-gray-800 font-medium py-2 border-b border-gray-100">Silifkemiz</a>
+<a href="#events" class="text-gray-800 font-medium py-2 border-b border-gray-100">Events</a>
+<a href="#gallery" class="text-gray-800 font-medium py-2 border-b border-gray-100">Gallery</a>
+<a href="#blog" class="text-gray-800 font-medium py-2 border-b border-gray-100">Blog</a>
+<a href="#sponsors" class="text-gray-800 font-medium py-2 border-b border-gray-100">Sponsors</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap self-start">Join Us</button>
+</div>
+</div>
+</header>
+
 
     <section class="hero-bg min-h-screen flex items-center relative">
         <div class="overlay absolute inset-0"></div>
         <div class="relative z-10 w-full">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="max-w-3xl">
-                    <nav class="text-white/80 text-sm mb-6">
-                        <span>Home</span> <i class="ri-arrow-right-s-line mx-2"></i> <span>Districts</span> <i class="ri-arrow-right-s-line mx-2"></i> <span class="text-white">Greenwich</span>
-                    </nav>
+                   
                     <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">Greenwich</h1>
                     <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">Where time begins and maritime history comes alive in London's most prestigious borough</p>
                     <div class="flex flex-wrap gap-4">
@@ -650,7 +715,19 @@
     <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-primary hover:bg-blue-600 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 z-50">
         <i class="ri-arrow-up-line"></i>
     </button>
+<script>
 
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      navLinks.forEach(l => l.classList.remove('active-nav'));
+      this.classList.add('active-nav');
+    });
+  });
+
+
+</script>
     <script id="navigation-scroll">
         document.addEventListener('DOMContentLoaded', function() {
             const nav = document.querySelector('nav');

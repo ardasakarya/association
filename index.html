@@ -1,104 +1,118 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Association - Empowering Communities Together</title>
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-</head>
-<body class="bg-gray-50">
-<!-- Header & Navigation -->
-<header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
-<div class="container mx-auto px-4 py-3 flex items-center justify-between">
-<a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
-<nav class="hidden md:flex items-center space-x-8">
-<a href="#" class="nav-link active-nav text-gray-800 font-medium hover:text-primary transition-colors">Home</a>
-<a href="silifkemiz.html" class="nav-link active-nav text-gray-800 font-medium hover:text-primary transition-colors">Silifkemiz</a>
-<a href="#events" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Events</a>
-<a href="#gallery" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Gallery</a>
-<a href="#blog" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Blog</a>
-<a href="#sponsors" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Sponsors</a>
-</nav>
 
-<div class="flex items-center space-x-4">
-   <!-- 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Association - Empowering Communities Together</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { primary: '#3b82f6', secondary: '#10b981' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body class="bg-gray-50">
+  <!-- Header & Navigation -->
+  <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#" class="nav-link active-nav text-gray-800 font-medium hover:text-primary transition-colors">Home</a>
+        <a href="silifkemiz.html"
+          class="nav-link  text-gray-800 font-medium hover:text-primary transition-colors">Silifkemiz</a>
+        <a href="#events" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Events</a>
+        <a href="#gallery" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Gallery</a>
+        <a href="#blog" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Blog</a>
+        <a href="#sponsors" class="nav-link text-gray-800 font-medium hover:text-primary transition-colors">Sponsors</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <!-- 
 <button class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Join Us</button>
 -->
-<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
-<i class="ri-menu-line ri-lg"></i>
-</button>
-</div>
+        <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobile-menu-button">
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
 
-</div>
-<!-- Mobile Navigation -->
-<div class="md:hidden hidden bg-white absolute w-full left-0 top-full shadow-md" id="mobile-menu">
-<div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-<a href="#" class="text-gray-800 font-medium py-2 border-b border-gray-100">Home</a>
-<a href="silifkemiz.html" class="text-gray-800 font-medium py-2 border-b border-gray-100">Silifkemiz</a>
-<a href="#events" class="text-gray-800 font-medium py-2 border-b border-gray-100">Events</a>
-<a href="#gallery" class="text-gray-800 font-medium py-2 border-b border-gray-100">Gallery</a>
-<a href="#blog" class="text-gray-800 font-medium py-2 border-b border-gray-100">Blog</a>
-<a href="#sponsors" class="text-gray-800 font-medium py-2 border-b border-gray-100">Sponsors</a>
-<button class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap self-start">Join Us</button>
-</div>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="relative w-full min-h-[700px] bg-cover bg-center mt-16 overflow-hidden bg-[url('https://readdy.ai/api/search-image?query=Professional%20association%20gathering%20with%20diverse%20people%20networking%20in%20a%20modern%20conference%20hall%2C%20natural%20lighting%20coming%20through%20large%20windows%2C%20professional%20atmosphere%2C%20elegant%20decorations%2C%20people%20engaged%20in%20meaningful%20conversations%2C%20high-quality%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape')]">
-  <!-- Arka Plan Karartma -->
-  <div class="absolute inset-0 bg-black/30 backdrop-blur-[0.8px] z-0"></div>
+    </div>
+    <!-- Mobile Navigation -->
+    <div class="md:hidden hidden bg-white absolute w-full left-0 top-full shadow-md" id="mobile-menu">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+        <a href="#" class="text-gray-800 font-medium py-2 border-b border-gray-100">Home</a>
+        <a href="silifkemiz.html" class="text-gray-800 font-medium py-2 border-b border-gray-100">Silifkemiz</a>
+        <a href="#events" class="text-gray-800 font-medium py-2 border-b border-gray-100">Events</a>
+        <a href="#gallery" class="text-gray-800 font-medium py-2 border-b border-gray-100">Gallery</a>
+        <a href="#blog" class="text-gray-800 font-medium py-2 border-b border-gray-100">Blog</a>
+        <a href="#sponsors" class="text-gray-800 font-medium py-2 border-b border-gray-100">Sponsors</a>
+        <button
+          class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap self-start">Join
+          Us</button>
+      </div>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section
+    class="relative w-full min-h-[700px] bg-cover bg-center mt-16 overflow-hidden bg-[url('https://readdy.ai/api/search-image?query=Professional%20association%20gathering%20with%20diverse%20people%20networking%20in%20a%20modern%20conference%20hall%2C%20natural%20lighting%20coming%20through%20large%20windows%2C%20professional%20atmosphere%2C%20elegant%20decorations%2C%20people%20engaged%20in%20meaningful%20conversations%2C%20high-quality%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape')]">
+    <!-- Arka Plan Karartma -->
+    <div class="absolute inset-0 bg-black/30 backdrop-blur-[0.8px] z-0"></div>
 
-  <!-- Sol Reklam -->
-  <div class="absolute top-0 left-0 h-full w-[200px] bg-yellow-100 z-10 p-4 border-r border-yellow-300 hidden lg:flex flex-col items-center justify-center">
-    <div class="text-center">
-      <h3 class="font-bold text-xl text-yellow-800 mb-2">Reklam Alanı</h3>
-      <p class="text-sm text-yellow-700">Kampanya içeriği buraya gelir.</p>
-      <button class="mt-4 px-4 py-2 bg-yellow-500 text-white text-sm rounded hover:bg-yellow-600 transition">Detaylar</button>
+    <!-- Sol Reklam -->
+    <div
+      class="absolute top-0 left-0 h-full w-[200px] bg-yellow-100 z-10 p-4 border-r border-yellow-300 hidden lg:flex flex-col items-center justify-center">
+      <div class="text-center">
+        <h3 class="font-bold text-xl text-yellow-800 mb-2">Reklam Alanı</h3>
+        <p class="text-sm text-yellow-700">Kampanya içeriği buraya gelir.</p>
+        <button
+          class="mt-4 px-4 py-2 bg-yellow-500 text-white text-sm rounded hover:bg-yellow-600 transition">Detaylar</button>
+      </div>
     </div>
-  </div>
 
-  <!-- Sağ Reklam -->
-  <div class="absolute top-0 right-0 h-full w-[200px] bg-blue-100 z-10 p-4 border-l border-blue-300 hidden lg:flex flex-col items-center justify-center">
-    <div class="text-center">
-      <h3 class="font-bold text-xl text-blue-800 mb-2">Sponsorlu İçerik</h3>
-      <p class="text-sm text-blue-700">Video, görsel veya link eklenebilir.</p>
-      <button class="mt-4 px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 transition">İncele</button>
+    <!-- Sağ Reklam -->
+    <div
+      class="absolute top-0 right-0 h-full w-[200px] bg-blue-100 z-10 p-4 border-l border-blue-300 hidden lg:flex flex-col items-center justify-center">
+      <div class="text-center">
+        <h3 class="font-bold text-xl text-blue-800 mb-2">Sponsorlu İçerik</h3>
+        <p class="text-sm text-blue-700">Video, görsel veya link eklenebilir.</p>
+        <button
+          class="mt-4 px-4 py-2 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 transition">İncele</button>
+      </div>
     </div>
-  </div>
 
-  <!-- Ana İçerik -->
-  <div class="relative z-10 flex items-center justify-center min-h-[700px] px-4 sm:px-8 lg:pl-[220px] lg:pr-[220px] text-white text-center">
-    <div class="max-w-2xl">
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Empowering Communities Together</h1>
-      <p class="text-base sm:text-lg mb-6 sm:mb-8">
-        We are dedicated to fostering connections, promoting growth, and creating positive impact through collaborative initiatives and community engagement.
-      </p>
-      <button class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">Learn More</button>
+    <!-- Ana İçerik -->
+    <div
+      class="relative z-10 flex items-center justify-center min-h-[700px] px-4 sm:px-8 lg:pl-[220px] lg:pr-[220px] text-white text-center">
+      <div class="max-w-2xl">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Empowering Communities Together</h1>
+        <p class="text-base sm:text-lg mb-6 sm:mb-8">
+          We are dedicated to fostering connections, promoting growth, and creating positive impact through
+          collaborative initiatives and community engagement.
+        </p>
+        <button class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">Learn
+          More</button>
+      </div>
     </div>
-  </div>
 
-  <!-- Mobil Reklamlar -->
-  <div class="lg:hidden absolute bottom-0 left-0 right-0 flex flex-col md:flex-row justify-between gap-4 px-4 py-6 bg-white/90 backdrop-blur z-10">
-    <div class="bg-yellow-100 p-4 rounded border border-yellow-300 w-full md:w-1/2">
-      <h3 class="font-bold text-yellow-800">Reklam Alanı</h3>
-      <p class="text-sm text-yellow-700">Mobil görünüm için içerik.</p>
+    <!-- Mobil Reklamlar -->
+    <div
+      class="lg:hidden absolute bottom-0 left-0 right-0 flex flex-col md:flex-row justify-between gap-4 px-4 py-6 bg-white/90 backdrop-blur z-10">
+      <div class="bg-yellow-100 p-4 rounded border border-yellow-300 w-full md:w-1/2">
+        <h3 class="font-bold text-yellow-800">Reklam Alanı</h3>
+        <p class="text-sm text-yellow-700">Mobil görünüm için içerik.</p>
+      </div>
+      <div class="bg-blue-100 p-4 rounded border border-blue-300 w-full md:w-1/2">
+        <h3 class="font-bold text-blue-800">Sponsorlu İçerik</h3>
+        <p class="text-sm text-blue-700">Mobil sponsor açıklaması.</p>
+      </div>
     </div>
-    <div class="bg-blue-100 p-4 rounded border border-blue-300 w-full md:w-1/2">
-      <h3 class="font-bold text-blue-800">Sponsorlu İçerik</h3>
-      <p class="text-sm text-blue-700">Mobil sponsor açıklaması.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Kayan Sponsorlar -->
@@ -109,564 +123,437 @@
       </div>
     </div>
   </div>
-</section>
+  </section>
 
-<!-- Sponsor Template -->
-<template id="sponsor-template">
-  <a href="#" target="_blank" class="flex flex-col items-center gap-2 min-w-[160px] hover:grayscale-0 grayscale transition">
-    <img src="https://via.placeholder.com/100x40?text=Icon" class="h-16" alt="Sponsor Icon" />
-    <span class="text-xs text-gray-500">Sponsor Adı</span>
-  </a>
-</template>
+  <!-- Sponsor Template -->
+  <template id="sponsor-template">
+    <a href="#" target="_blank"
+      class="flex flex-col items-center gap-2 min-w-[160px] hover:grayscale-0 grayscale transition">
+      <img src="https://via.placeholder.com/100x40?text=Icon" class="h-16" alt="Sponsor Icon" />
+      <span class="text-xs text-gray-500">Sponsor Adı</span>
+    </a>
+  </template>
 
 
 
 
-<!-- About Section -->
-<section id="about" class="mt-20 py-24 bg-gradient-to-b from-gray-50 via-white to-gray-100">
-  <div class="container mx-auto px-4">
+  <!-- About Section -->
+  <section id="about" class="mt-20 py-24 bg-gradient-to-b from-gray-50 via-white to-gray-100">
+    <div class="container mx-auto px-4">
 
-    <!-- Başlık -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-extrabold text-gray-900 mb-6" data-aos="fade-up">About Us</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-        We are a passionate organization committed to building bridges between individuals and communities by fostering trust, growth, and shared purpose.
-      </p>
-    </div>
-
-    <!-- Görsel + Who We Are -->
-    <div class="flex flex-col lg:flex-row items-center gap-12 mb-20">
-      
-      <!-- Görsel -->
-      <div class="lg:w-1/2 w-full" data-aos="fade-right">
-        <img 
-          src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80" 
-          alt="team" 
-          class="rounded-2xl shadow-2xl w-full h-full object-cover transform hover:scale-105 transition duration-500"
-        >
+      <!-- Başlık -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-6" data-aos="fade-up">About Us</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+          We are a passionate organization committed to building bridges between individuals and communities by
+          fostering trust, growth, and shared purpose.
+        </p>
       </div>
 
-      <!-- Who We Are -->
-      <div class="lg:w-1/2 w-full bg-white p-10 rounded-2xl shadow-xl" data-aos="fade-left" data-aos-delay="100">
-        <h3 class="text-3xl lg:text-4xl font-extrabold text-primary mb-6">Who We Are</h3>
-        <div class="space-y-5 text-gray-700 text-lg leading-relaxed">
-          <p>
-            We are a dynamic and purpose-driven organization made up of passionate leaders, committed volunteers, and forward-thinking changemakers.
-          </p>
-          <p>
-            Since our inception, we have focused on building strong foundations of trust and mutual respect within the communities we serve.
-          </p>
-          <p>
-            Our approach is both people-centered and action-oriented. We believe that education, empowerment, and access to resources are the keys to unlocking human potential.
-          </p>
-          <p>
-            At our core, we are more than just an organization—we are a growing movement driven by compassion and committed to shaping a better, more inclusive future for all.
-          </p>
+      <!-- Görsel + Who We Are -->
+      <div class="flex flex-col lg:flex-row items-center gap-12 mb-20">
+
+        <!-- Görsel -->
+        <div class="lg:w-1/2 w-full" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
+            alt="team"
+            class="rounded-2xl shadow-2xl w-full h-full object-cover transform hover:scale-105 transition duration-500">
+        </div>
+
+        <!-- Who We Are -->
+        <div class="lg:w-1/2 w-full bg-white p-10 rounded-2xl shadow-xl" data-aos="fade-left" data-aos-delay="100">
+          <h3 class="text-3xl lg:text-4xl font-extrabold text-primary mb-6">Who We Are</h3>
+          <div class="space-y-5 text-gray-700 text-lg leading-relaxed">
+            <p>
+              We are a dynamic and purpose-driven organization made up of passionate leaders, committed volunteers, and
+              forward-thinking changemakers.
+            </p>
+            <p>
+              Since our inception, we have focused on building strong foundations of trust and mutual respect within the
+              communities we serve.
+            </p>
+            <p>
+              Our approach is both people-centered and action-oriented. We believe that education, empowerment, and
+              access to resources are the keys to unlocking human potential.
+            </p>
+            <p>
+              At our core, we are more than just an organization—we are a growing movement driven by compassion and
+              committed to shaping a better, more inclusive future for all.
+            </p>
+          </div>
         </div>
       </div>
+
+      <!-- Buton -->
+      <div class="flex justify-center mt-10">
+        <a href="about_us.html"
+          class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">
+          Hakkımızda Daha Fazlası
+        </a>
+      </div>
+
+
+
     </div>
+  </section>
 
-    <!-- Buton -->
-<div class="flex justify-center mt-10">
-  <a href="about_us.html" class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">
-    Hakkımızda Daha Fazlası
-  </a>
-</div>
+  <!-- Events Section -->
+  <section id="events" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
 
+      <!-- Başlık -->
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Events</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Discover our upcoming events and revisit the highlights from our past
+          gatherings. Join us to connect, learn, and grow together.</p>
+      </div>
 
-
-  </div>
-</section>
-
-<!-- Events Section -->
-<section id="events" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
-
-    <!-- Başlık -->
-    <div class="text-center mb-12" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Events</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">Discover our upcoming events and revisit the highlights from our past gatherings. Join us to connect, learn, and grow together.</p>
-    </div>
-
-    <!-- Butonlar -->
-    <div class="flex justify-center mb-8" data-aos="fade-up" data-aos-delay="100">
-      <div class="inline-flex rounded-full bg-gray-100 p-1">
-        <button class="px-6 py-2 !rounded-full bg-primary text-white font-medium whitespace-nowrap">Upcoming Events</button>
-        <!--
+      <!-- Butonlar -->
+      <div class="flex justify-center mb-8" data-aos="fade-up" data-aos-delay="100">
+        <div class="inline-flex rounded-full bg-gray-100 p-1">
+          <button class="px-6 py-2 !rounded-full bg-primary text-white font-medium whitespace-nowrap">Upcoming
+            Events</button>
+          <!--
         <button class="px-6 py-2 !rounded-full text-gray-700 font-medium whitespace-nowrap">Past Events</button>
         -->
-      </div>
-    </div>
-
-    <!-- Etkinlik Kartları -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- Event Card 1 -->
-    <!-- Event Card 1 -->
-<div id="event-1" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="100">
-  <div class="h-48 overflow-hidden">
-    <img src="https://readdy.ai/api/search-image?query=Professional%20networking%20event%20with%20diverse%20attendees%20in%20business%20attire%2C%20engaging%20in%20discussions%2C%20modern%20conference%20venue%20with%20professional%20lighting%2C%20people%20exchanging%20business%20cards%2C%20corporate%20atmosphere%2C%20high-quality%20professional%20photography&width=600&height=400&seq=2&orientation=landscape" alt="Annual Leadership Conference" class="w-full h-full object-cover object-top">
-  </div>
-  <div class="p-6">
-    <div class="flex items-center text-sm text-primary mb-2">
-      <div class="w-5 h-5 flex items-center justify-center mr-2">
-        <i class="ri-calendar-line"></i>
-      </div>
-      <span>May 15, 2025 • 9:00 AM - 5:00 PM</span>
-    </div>
-    <h3 class="text-xl font-semibold text-gray-900 mb-2">Annual Leadership Conference</h3>
-    <p class="text-gray-600 mb-4">Join industry leaders and experts for a day of inspiring talks, workshops, and networking opportunities focused on innovative leadership strategies.</p>
-    <div class="flex items-center justify-between mb-4">
-      <div class="flex items-center text-sm text-gray-500">
-        <div class="w-5 h-5 flex items-center justify-center mr-2">
-          <i class="ri-map-pin-line"></i>
         </div>
-        <span>Grand Hotel Conference Center</span>
       </div>
-    </div>
-   <a href="event_details.html" id="details-event-1" class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">
-  Learn More
-</a>
 
-  </div>
-</div>
+      <!-- Etkinlik Kartları -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<!-- Event Card 2 -->
-<div id="event-2" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="200">
-  <div class="h-48 overflow-hidden">
-    <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20setting%20with%20small%20groups%20working%20together%20at%20round%20tables%2C%20facilitator%20guiding%20discussion%2C%20flip%20charts%20and%20presentation%20materials%20visible%2C%20bright%20modern%20training%20room%2C%20business%20casual%20attire%2C%20engaged%20participants%2C%20high-quality%20professional%20photography&width=600&height=400&seq=3&orientation=landscape" alt="Community Workshop Series" class="w-full h-full object-cover object-top">
-  </div>
-  <div class="p-6">
-    <div class="flex items-center text-sm text-primary mb-2">
-      <div class="w-5 h-5 flex items-center justify-center mr-2">
-        <i class="ri-calendar-line"></i>
-      </div>
-      <span>June 8, 2025 • 2:00 PM - 6:00 PM</span>
-    </div>
-    <h3 class="text-xl font-semibold text-gray-900 mb-2">Community Workshop Series</h3>
-    <p class="text-gray-600 mb-4">A hands-on workshop focused on community building strategies and collaborative problem-solving techniques for neighborhood leaders.</p>
-    <div class="flex items-center justify-between mb-4">
-      <div class="flex items-center text-sm text-gray-500">
-        <div class="w-5 h-5 flex items-center justify-center mr-2">
-          <i class="ri-map-pin-line"></i>
-        </div>
-        <span>Community Center</span>
-      </div>
-    </div>
-   <a href="event_details.html" id="details-event-2" class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">
-  Learn More
-</a>
-  </div>
-</div>
-
-<!-- Event Card 3 -->
-<div id="event-3" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="300">
-  <div class="h-48 overflow-hidden">
-    <img src="https://readdy.ai/api/search-image?query=Elegant%20charity%20gala%20with%20well-dressed%20attendees%2C%20beautifully%20decorated%20tables%20with%20floral%20centerpieces%2C%20soft%20ambient%20lighting%2C%20champagne%20glasses%2C%20auction%20items%20displayed%2C%20formal%20evening%20atmosphere%2C%20professional%20venue%20setting%2C%20high-quality%20professional%20photography&width=600&height=400&seq=4&orientation=landscape" alt="Annual Charity Gala" class="w-full h-full object-cover object-top">
-  </div>
-  <div class="p-6">
-    <div class="flex items-center text-sm text-primary mb-2">
-      <div class="w-5 h-5 flex items-center justify-center mr-2">
-        <i class="ri-calendar-line"></i>
-      </div>
-      <span>July 22, 2025 • 7:00 PM - 10:00 PM</span>
-    </div>
-    <h3 class="text-xl font-semibold text-gray-900 mb-2">Annual Charity Gala</h3>
-    <p class="text-gray-600 mb-4">An elegant evening of dining, entertainment, and fundraising to support our community initiatives and scholarship programs.</p>
-    <div class="flex items-center justify-between mb-4">
-      <div class="flex items-center text-sm text-gray-500">
-        <div class="w-5 h-5 flex items-center justify-center mr-2">
-          <i class="ri-map-pin-line"></i>
-        </div>
-        <span>Riverside Luxury Hotel</span>
-      </div>
-    </div>
-   <a href="event_details.html" id="details-event-3" class="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">
-  Learn More
-</a>
-  </div>
-</div>
+        <!-- Event Card 1 -->
+        <!-- Event Card 1 -->
+        <div id="event-1" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          data-aos="fade-up" data-aos-delay="100">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20networking%20event%20with%20diverse%20attendees%20in%20business%20attire%2C%20engaging%20in%20discussions%2C%20modern%20conference%20venue%20with%20professional%20lighting%2C%20people%20exchanging%20business%20cards%2C%20corporate%20atmosphere%2C%20high-quality%20professional%20photography&width=600&height=400&seq=2&orientation=landscape"
+              alt="Annual Leadership Conference" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-primary mb-2">
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-calendar-line"></i>
+              </div>
+              <span>May 15, 2025 • 9:00 AM - 5:00 PM</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Annual Leadership Conference</h3>
+            <p class="text-gray-600 mb-4">Join industry leaders and experts for a day of inspiring talks, workshops, and
+              networking opportunities focused on innovative leadership strategies.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center text-sm text-gray-500">
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span>Grand Hotel Conference Center</span>
+              </div>
+            </div>
+            <a href="event_details.html?id=eventButton_001" id="eventButton_001"
+              class="event-link-button bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">
+              Learn More
+            </a>
 
 
-    </div>
-  </div>
-</section>
-<!-- Gallery Section -->
-<section id="gallery" class="py-20 bg-gray-50">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-gray-900 mb-3">Photo Gallery</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Explore moments from our events, workshops, and community activities through our curated collection of photographs.
-      </p>
-    </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-screen-lg mx-auto">
-      
-      <!-- Gallery Item 1 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="100">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Networking Summit</h3>
-            <p>May 2024</p>
+
           </div>
         </div>
-      </div>
 
-      <!-- Gallery Item 2 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="200">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Interactive Workshop</h3>
-            <p>April 2024</p>
+        <!-- Event Card 2 -->
+        <div id="event-2" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          data-aos="fade-up" data-aos-delay="200">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20workshop%20setting%20with%20small%20groups%20working%20together%20at%20round%20tables%2C%20facilitator%20guiding%20discussion%2C%20flip%20charts%20and%20presentation%20materials%20visible%2C%20bright%20modern%20training%20room%2C%20business%20casual%20attire%2C%20engaged%20participants%2C%20high-quality%20professional%20photography&width=600&height=400&seq=3&orientation=landscape"
+              alt="Community Workshop Series" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-primary mb-2">
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-calendar-line"></i>
+              </div>
+              <span>June 8, 2025 • 2:00 PM - 6:00 PM</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Community Workshop Series</h3>
+            <p class="text-gray-600 mb-4">A hands-on workshop focused on community building strategies and collaborative
+              problem-solving techniques for neighborhood leaders.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center text-sm text-gray-500">
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span>Community Center</span>
+              </div>
+            </div>
+            <a href="event_details.html?id=eventButton_002" id="eventButton_002"
+              class="event-link-button bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">
+              Learn More
+            </a>
+
+
           </div>
         </div>
-      </div>
 
-      <!-- Gallery Item 3 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="300">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Event" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Networking Event</h3>
-            <p>March 2024</p>
+        <!-- Event Card 3 -->
+        <div id="event-3" class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-[1.02]"
+          data-aos="fade-up" data-aos-delay="300">
+          <div class="h-48 overflow-hidden">
+            <img
+              src="https://readdy.ai/api/search-image?query=Elegant%20charity%20gala%20with%20well-dressed%20attendees%2C%20beautifully%20decorated%20tables%20with%20floral%20centerpieces%2C%20soft%20ambient%20lighting%2C%20champagne%20glasses%2C%20auction%20items%20displayed%2C%20formal%20evening%20atmosphere%2C%20professional%20venue%20setting%2C%20high-quality%20professional%20photography&width=600&height=400&seq=4&orientation=landscape"
+              alt="Annual Charity Gala" class="w-full h-full object-cover object-top">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center text-sm text-primary mb-2">
+              <div class="w-5 h-5 flex items-center justify-center mr-2">
+                <i class="ri-calendar-line"></i>
+              </div>
+              <span>July 22, 2025 • 7:00 PM - 10:00 PM</span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Annual Charity Gala</h3>
+            <p class="text-gray-600 mb-4">An elegant evening of dining, entertainment, and fundraising to support our
+              community initiatives and scholarship programs.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center text-sm text-gray-500">
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span>Riverside Luxury Hotel</span>
+              </div>
+            </div>
+            <a href="event_details.html?id=eventButton_003" id="eventButton_003"
+              class="event-link-button bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded text-white font-medium">
+              Learn More
+            </a>
+
+
+
+
           </div>
         </div>
-      </div>
 
-      <!-- Gallery Item 4 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="400">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Awards" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Awards Ceremony</h3>
-            <p>Feb 2024</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- Gallery Item 5 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="500">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Panel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Expert Panel</h3>
-            <p>Jan 2024</p>
-          </div>
-        </div>
       </div>
-
-      <!-- Gallery Item 6 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="600">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Gala" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Charity Gala</h3>
-            <p>Dec 2023</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Item 7 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="700">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Community Service" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Community Service</h3>
-            <p>Nov 2023</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Item 8 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="800">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Leadership Training" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Leadership Training</h3>
-            <p>Oct 2023</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Item 9 -->
-      <div class="overflow-hidden rounded-lg shadow relative group aspect-square" data-aos="zoom-in" data-aos-delay="900">
-        <img src="https://readdy.ai/api/search-image?query=Professional%20workshop%20with%20interactive%20learning%2C%20participants%20engaged%20in%20hands-on%20activities%2C%20modern%20training%20room%20with%20natural%20light%2C%20collaborative%20atmosphere%2C%20high-quality%20professional%20photography&width=500&height=500&seq=20&orientation=squarish" alt="Networking" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"alt="Team Building" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
-          <div class="p-3 text-white text-sm">
-            <h3 class="font-semibold">Team Building</h3>
-            <p>Sep 2023</p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
-
-
-<section id="blog" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-gray-900 mb-3">Latest News & Insights</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        Stay updated with our latest articles, news, and insights about our association's activities and industry trends.
-      </p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <!-- CARD 1 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]" data-aos="fade-up" data-aos-delay="100">
-        <img src="assets/img/blog/news.jpeg" alt="Networking" class="h-[180px] w-full object-cover" />
-        <div class="p-5 flex flex-col flex-grow">
-          <p class="text-xs text-blue-600 mb-2">April 28, 2025 • Professional Development</p>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">5 Networking Strategies That Actually Work</h3>
-          <p class="text-sm text-gray-600 flex-grow">
-            Discover proven networking techniques that help professionals build meaningful connections.
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">Photo Gallery</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore moments from our events, workshops, and community activities through our curated collection of
+            photographs.
           </p>
-          <div class="mt-4">
-            <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+        </div>
+
+        <div id="galleryGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-screen-md mx-auto">
+          <!-- Fotoğraflar JS ile yüklenecek -->
+        </div>
+
+        <!-- Buton sadece mobilde görünür -->
+        <div class="text-center mt-6 sm:hidden">
+          <button id="toggleBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded">
+            Daha Fazla Göster
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div id="imageModal"
+        class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden flex items-center justify-center p-4">
+        <div class="relative w-full max-w-4xl max-h-[90vh]">
+          <button onclick="closePreview()"
+            class="absolute top-4 right-4 sm:right-6 md:right-10 lg:right-20 text-black text-4xl font-bold z-50"
+            style="text-shadow: 0 0 3px rgba(255,255,255,0.8);">
+            &times;
+          </button>
+
+          <img id="modalImage" class="w-full h-auto max-h-[90vh] rounded-lg shadow-lg object-contain" />
+        </div>
+      </div>
+    </section>
+    <!-- Blog Section -->
+
+
+
+
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">Leadership Team</h2>
+          <p class="text-xl text-gray-600">Experienced professionals driving our mission forward</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center bg-white p-8 rounded-2xl shadow-lg">
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20confident%20business%20executive%20woman%20in%20modern%20corporate%20attire%2C%20clean%20studio%20lighting%2C%20professional%20photography%20style%2C%20contemporary%20business%20portrait%20with%20neutral%20background&width=300&height=300&seq=leader001&orientation=squarish"
+              alt="Sarah Johnson" class="w-32 h-32 object-cover object-top rounded-full mx-auto mb-6">
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Sarah Johnson</h4>
+            <p class="text-primary font-medium mb-4">President & CEO</p>
+            <p class="text-gray-600 text-sm leading-relaxed">With over 20 years of industry experience, Sarah leads our
+              strategic vision and global expansion initiatives.</p>
+          </div>
+          <div class="text-center bg-white p-8 rounded-2xl shadow-lg">
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20distinguished%20business%20executive%20man%20in%20formal%20business%20suit%2C%20confident%20expression%2C%20studio%20lighting%2C%20corporate%20photography%20style%20with%20clean%20neutral%20background&width=300&height=300&seq=leader002&orientation=squarish"
+              alt="Michael Chen" class="w-32 h-32 object-cover object-top rounded-full mx-auto mb-6">
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Michael Chen</h4>
+            <p class="text-primary font-medium mb-4">Vice President of Operations</p>
+            <p class="text-gray-600 text-sm leading-relaxed">Michael oversees our operational excellence and member
+              services, ensuring exceptional experiences for all members.</p>
+          </div>
+          <div class="text-center bg-white p-8 rounded-2xl shadow-lg">
+            <img
+              src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20accomplished%20business%20woman%20executive%20in%20contemporary%20business%20attire%2C%20warm%20professional%20smile%2C%20studio%20photography%20with%20clean%20background%2C%20corporate%20portrait%20style&width=300&height=300&seq=leader003&orientation=squarish"
+              alt="Dr. Emily Rodriguez" class="w-32 h-32 object-cover object-top rounded-full mx-auto mb-6">
+            <h4 class="text-xl font-bold text-gray-900 mb-2">Dr. Emily Rodriguez</h4>
+            <p class="text-primary font-medium mb-4">Director of Research</p>
+            <p class="text-gray-600 text-sm leading-relaxed">Dr. Rodriguez leads our research initiatives and innovation
+              programs, driving industry advancement through evidence-based insights.</p>
           </div>
         </div>
       </div>
-      
-      <!-- CARD 2 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/img/blog/news2.jpeg" alt="Conference" class="h-[180px] w-full object-cover" />
-        <div class="p-5 flex flex-col flex-grow">
-          <p class="text-xs text-blue-600 mb-2">April 15, 2025 • Events</p>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">How to Get the Most from Our Annual Conference</h3>
-          <p class="text-sm text-gray-600 flex-grow">
-            Maximize your learning and networking opportunities with these tips for attending our flagship event.
+    </section>
+
+
+    <section class="bg-gradient-to-b from-gray-50 to-white py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-extrabold text-gray-800 mb-4" data-aos="fade-down">📘 Dernek Tüzüğü</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-down" data-aos-delay="100">
+            Derneğimizin yapısını, işleyişini ve misyonunu tanımlayan resmi tüzüğü aşağıdan inceleyebilir ya da
+            cihazınıza indirebilirsiniz.
           </p>
-          <div class="mt-4">
-            <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+        </div>
+
+        <!-- Kart Tasarımı -->
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-10 flex flex-col md:flex-row items-center gap-8 border border-gray-200"
+          data-aos="zoom-in">
+          <!-- Sol Görsel -->
+          <div class="w-full md:w-1/3">
+            <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Tüzük İkonu"
+              class="w-32 h-32 mx-auto md:mx-0 object-contain grayscale hover:grayscale-0 transition duration-300">
+          </div>
+
+          <!-- Sağ İçerik -->
+          <div class="w-full md:w-2/3 text-center md:text-left">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tüzük Belgesi</h3>
+            <p class="text-gray-600 mb-6">
+              Tüzüğümüz, dernek üyelerinin haklarını ve yükümlülüklerini belirlerken, şeffaf ve demokratik bir yapı
+              sunar. Detaylı bilgiye aşağıdaki butonlardan ulaşabilirsiniz.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a href="tuzuk.pdf" target="_blank"
+                class="flex items-center gap-2 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15 12H9m12 0A9 9 0 1 1 3 12a9 9 0 0 1 18 0Z" />
+                </svg>
+                PDF Görüntüle
+              </a>
+              <a href="tuzuk.pdf" download
+                class="flex items-center gap-2 px-5 py-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4 16v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1M12 12v6m0 0l3-3m-3 3l-3-3m0-6V4h6v4" />
+                </svg>
+                PDF İndir
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      
-      <!-- CARD 3 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]" data-aos="fade-up" data-aos-delay="300">
-        <img src="assets/img/blog/news3.jpg" alt="Remote Teams" class="h-[180px] w-full object-cover" />
-        <div class="p-5 flex flex-col flex-grow">
-          <p class="text-xs text-blue-600 mb-2">April 10, 2025 • Leadership</p>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Leading Remote Teams: Best Practices</h3>
-          <p class="text-sm text-gray-600 flex-grow">
-            Explore how to effectively lead and engage remote teams with these proven leadership methods.
+    </section>
+
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Sponsors</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            We are grateful to our sponsors whose generous support makes our work possible.
+            Their partnership is essential to our mission and impact.
           </p>
-          <div class="mt-4">
-            <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
+        </div>
+
+        <!-- Sponsor Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Sponsor Card -->
+          <div
+            class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 mx-auto mb-4 relative">
+              <i
+                class="ri-building-4-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Global Innovations Inc.</h4>
+            <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Leading technology
+              solutions provider</p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 mx-auto mb-4 relative">
+              <i
+                class="ri-bank-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Metropolitan Financial</h4>
+            <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Financial services
+              leader</p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 mx-auto mb-4 relative">
+              <i
+                class="ri-store-2-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Riverside Retail</h4>
+            <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Premium retail
+              solutions</p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 mx-auto mb-4 relative">
+              <i
+                class="ri-building-2-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Summit Properties</h4>
+            <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Real estate excellence
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 mx-auto mb-4 relative">
+              <i
+                class="ri-briefcase-4-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Oakwood Consulting</h4>
+            <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Business solutions</p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 mx-auto mb-4 relative">
+              <i
+                class="ri-paint-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
+            </div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-2">Creative Design</h4>
+            <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Creative excellence
+            </p>
           </div>
         </div>
-      </div>
-      
-      <!-- CARD 4 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]" data-aos="fade-up" data-aos-delay="400">
-        <img src="assets/img/blog/news4.jpg" alt="Workshops" class="h-[180px] w-full object-cover" />
-        <div class="p-5 flex flex-col flex-grow">
-          <p class="text-xs text-blue-600 mb-2">March 28, 2025 • Workshops</p>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Interactive Workshops You Shouldn’t Miss</h3>
-          <p class="text-sm text-gray-600 flex-grow">
-            Join our upcoming workshops designed to build practical skills in real-world scenarios.
-          </p>
-          <div class="mt-4">
-            <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- CARD 5 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]" data-aos="fade-up" data-aos-delay="500">
-        <img src="assets/img/blog/news5.png" alt="Strategy Guide" class="h-[180px] w-full object-cover" />
-        <div class="p-5 flex flex-col flex-grow">
-          <p class="text-xs text-blue-600 mb-2">March 20, 2025 • Strategy</p>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Future-Proof Your Career: A Strategic Guide</h3>
-          <p class="text-sm text-gray-600 flex-grow">
-            Learn how to align your goals with emerging trends in your field for long-term success.
-          </p>
-          <div class="mt-4">
-            <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
-          </div>
-        </div>
-      </div>
-      
-      <!-- CARD 6 -->
-      <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-[420px]" data-aos="fade-up" data-aos-delay="600">
-        <img src="assets/img/blog/news6.jpg" alt="Panel Discussion" class="h-[180px] w-full object-cover" />
-        <div class="p-5 flex flex-col flex-grow">
-          <p class="text-xs text-blue-600 mb-2">March 5, 2025 • Panel</p>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">Insights from Our Latest Panel Discussion</h3>
-          <p class="text-sm text-gray-600 flex-grow">
-            Experts shared perspectives on current industry challenges and future opportunities.
-          </p>
-          <div class="mt-4">
-            <button class="text-blue-600 font-medium hover:underline">Daha Fazla</button>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-    
-    <!-- Optional: Buton (yorumda bırakıldı) -->
-    <!--
-    <div class="text-center mt-12">
-      <button class="bg-white text-gray-800 border border-gray-300 px-8 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors">View All Articles</button>
-    </div>
-    -->
-    
-  </div>
-</section>
 
-<section class="bg-gray-50 py-20">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-extrabold text-center text-gray-800 mb-16">Yönetim Kurulu</h2>
-
-    <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
-      <!-- Sol Yardımcı -->
-      <div class="relative group w-72 h-[400px] bg-white border border-gray-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition" data-aos="fade-left" data-aos-delay="400">
-        <img src="assets/img_people/luthfi-alfarizi-jlJpDBK17Hw-unsplash.jpg" alt="Yardımcı 1"
-             class="w-full h-full object-cover group-hover:brightness-75 transition duration-500">
-        <div class="absolute bottom-0 left-0 w-full bg-black/70 text-white px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-          <h3 class="text-lg font-semibold">Mehmet Kaya</h3>
-          <p class="text-sm text-gray-200">Başkan Yardımcısı</p>
-        </div>
-      </div>
-
-      <!-- Başkan Ortada -->
-      <div class="relative group w-80 h-[450px] bg-white border-4 border-blue-500 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition" data-aos="fade-down" data-aos-delay="100">
-        <img src="assets/img_people/luthfi-alfarizi-0piYmLeSgTQ-unsplash.jpg" alt="Başkan"
-             class="w-full h-full object-cover group-hover:brightness-75 transition duration-500">
-        <div class="absolute bottom-0 left-0 w-full bg-blue-800/80 text-white px-6 py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-          <h3 class="text-xl font-bold">Ahmet Yılmaz</h3>
-          <p class="text-sm text-gray-200">Yönetim Kurulu Başkanı</p>
-        </div>
-      </div>
-
-      <!-- Sağ Yardımcı -->
-      <div class="relative group w-72 h-[400px] bg-white border border-gray-300 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition" data-aos="fade-right" data-aos-delay="400">
-        <img src="assets/img_people/luthfi-alfarizi-yXAGGbVuhEY-unsplash.jpg" alt="Yardımcı 2"
-             class="w-full h-full object-cover group-hover:brightness-75 transition duration-500">
-        <div class="absolute bottom-0 left-0 w-full bg-black/70 text-white px-4 py-3 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-          <h3 class="text-lg font-semibold">Ayşe Koç</h3>
-          <p class="text-sm text-gray-200">Genel Sekreter</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="bg-gradient-to-b from-gray-50 to-white py-20">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-extrabold text-gray-800 mb-4" data-aos="fade-down">📘 Dernek Tüzüğü</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto text-lg" data-aos="fade-down" data-aos-delay="100">
-        Derneğimizin yapısını, işleyişini ve misyonunu tanımlayan resmi tüzüğü aşağıdan inceleyebilir ya da cihazınıza indirebilirsiniz.
-      </p>
-    </div>
-
-    <!-- Kart Tasarımı -->
-    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-10 flex flex-col md:flex-row items-center gap-8 border border-gray-200" data-aos="zoom-in">
-      <!-- Sol Görsel -->
-      <div class="w-full md:w-1/3">
-        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Tüzük İkonu"
-             class="w-32 h-32 mx-auto md:mx-0 object-contain grayscale hover:grayscale-0 transition duration-300">
-      </div>
-
-      <!-- Sağ İçerik -->
-      <div class="w-full md:w-2/3 text-center md:text-left">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tüzük Belgesi</h3>
-        <p class="text-gray-600 mb-6">
-          Tüzüğümüz, dernek üyelerinin haklarını ve yükümlülüklerini belirlerken, şeffaf ve demokratik bir yapı sunar. Detaylı bilgiye aşağıdaki butonlardan ulaşabilirsiniz.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="tuzuk.pdf" target="_blank"
-             class="flex items-center gap-2 px-5 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
-                 viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
-                 d="M15 12H9m12 0A9 9 0 1 1 3 12a9 9 0 0 1 18 0Z"/></svg>
-            PDF Görüntüle
-          </a>
-          <a href="tuzuk.pdf" download
-             class="flex items-center gap-2 px-5 py-3 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
-                 viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
-                 d="M4 16v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1M12 12v6m0 0l3-3m-3 3l-3-3m0-6V4h6v4"/></svg>
-            PDF İndir
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Sponsors Section -->
-<section id="sponsors" class="py-20 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Sponsors</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          We are grateful to our sponsors whose generous support makes our work possible.
-          Their partnership is essential to our mission and impact.
-        </p>
-      </div>
-  
-      <!-- Sponsor Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Sponsor Card -->
-        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"  data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 mx-auto mb-4 relative">
-            <i class="ri-building-4-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
-          </div>
-          <h4 class="text-lg font-semibold text-gray-900 mb-2">Global Innovations Inc.</h4>
-          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Leading technology solutions provider</p>
-        </div>
-  
-        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"  data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 mx-auto mb-4 relative">
-            <i class="ri-bank-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
-          </div>
-          <h4 class="text-lg font-semibold text-gray-900 mb-2">Metropolitan Financial</h4>
-          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Financial services leader</p>
-        </div>
-  
-        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"  data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 mx-auto mb-4 relative">
-            <i class="ri-store-2-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
-          </div>
-          <h4 class="text-lg font-semibold text-gray-900 mb-2">Riverside Retail</h4>
-          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Premium retail solutions</p>
-        </div>
-  
-        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"  data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 mx-auto mb-4 relative">
-            <i class="ri-building-2-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
-          </div>
-          <h4 class="text-lg font-semibold text-gray-900 mb-2">Summit Properties</h4>
-          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Real estate excellence</p>
-        </div>
-  
-        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"  data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 mx-auto mb-4 relative">
-            <i class="ri-briefcase-4-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
-          </div>
-          <h4 class="text-lg font-semibold text-gray-900 mb-2">Oakwood Consulting</h4>
-          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Business solutions</p>
-        </div>
-  
-        <div class="bg-white rounded-lg p-6 transform hover:scale-105 transition-transform duration-300 shadow-md group text-center"  data-aos="fade-up" data-aos-delay="100">
-          <div class="w-16 h-16 mx-auto mb-4 relative">
-            <i class="ri-paint-fill text-4xl text-primary absolute inset-0 flex items-center justify-center transform group-hover:scale-110 transition-transform"></i>
-          </div>
-          <h4 class="text-lg font-semibold text-gray-900 mb-2">Creative Design</h4>
-          <p class="text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity">Creative excellence</p>
-        </div>
-      </div>
-  
-      <!-- Call to Action
+        <!-- Call to Action
       <div class="mt-16 text-center bg-white rounded-lg shadow-md p-8">
         <h3 class="text-2xl font-semibold text-gray-900 mb-4">Become a Sponsor</h3>
         <p class="text-gray-600 max-w-2xl mx-auto mb-6">
@@ -678,67 +565,71 @@
         </button>
       </div>
        -->
-    </div>
+      </div>
 
-  </section>
-  
-<!-- Footer -->
-<footer class="bg-gray-900 text-white pt-16 pb-8">
-<div class="container mx-auto px-4">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-<div>
-<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
-<p class="text-gray-400 mb-6">Empowering communities through collaboration, education, and advocacy since 2005.</p>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
-<i class="ri-facebook-fill"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
-<i class="ri-twitter-x-fill"></i>
-</a>
+    </section>
 
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
-<i class="ri-instagram-fill"></i>
-</a>
-</div>
-</div>
-<div>
-<h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-<ul class="space-y-3">
-<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
-<li><a href="#events" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
-<li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
-<li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-<li><a href="#sponsors" class="text-gray-400 hover:text-white transition-colors">Sponsors</a></li>
-<!--
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
+            <p class="text-gray-400 mb-6">Empowering communities through collaboration, education, and advocacy since
+              2005.</p>
+            <div class="flex space-x-4">
+              <a href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+                <i class="ri-twitter-x-fill"></i>
+              </a>
+
+              <a href="#"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-primary transition-colors">
+                <i class="ri-instagram-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+              <li><a href="#events" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+              <li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+              <li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#sponsors" class="text-gray-400 hover:text-white transition-colors">Sponsors</a></li>
+              <!--
 <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Join Us</a></li>
 -->
-</ul>
-</div>
-<div>
-<h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-<ul class="space-y-3">
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1 text-gray-400">
-<i class="ri-map-pin-line"></i>
-</div>
-<span class="text-gray-400">123 Association Way<br>Suite 500<br>New York, NY 10001</span>
-</li>
-<li class="flex items-center">
-<div class="w-5 h-5 flex items-center justify-center mr-3 text-gray-400">
-<i class="ri-phone-line"></i>
-</div>
-<span class="text-gray-400">(212) 555-1234</span>
-</li>
-<li class="flex items-center">
-<div class="w-5 h-5 flex items-center justify-center mr-3 text-gray-400">
-<i class="ri-mail-line"></i>
-</div>
-<span class="text-gray-400">info@association.org</span>
-</li>
-</ul>
-</div>
-<!--
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center mr-3 mt-1 text-gray-400">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-400">123 Association Way<br>Suite 500<br>New York, NY 10001</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-3 text-gray-400">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-400">(212) 555-1234</span>
+              </li>
+              <li class="flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center mr-3 text-gray-400">
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-400">info@association.org</span>
+              </li>
+            </ul>
+          </div>
+          <!--
 <div>
 <h3 class="text-lg font-semibold mb-4">Subscribe</h3>
 <p class="text-gray-400 mb-4">Stay updated with our latest news and events.</p>
@@ -750,20 +641,21 @@
 </form>
 </div>
 -->
-</div>
-<div class="border-t border-gray-800 pt-8">
-<div class="flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Association. All rights reserved.</p>
-<div class="flex space-x-4 text-sm text-gray-500">
-<a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
-<a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
-<a href="#" class="hover:text-gray-300 transition-colors">Cookie Policy</a>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<script src="script.js"></script>
-<script>AOS.init();</script>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Association. All rights reserved.</p>
+            <div class="flex space-x-4 text-sm text-gray-500">
+              <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+              <a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
+              <a href="#" class="hover:text-gray-300 transition-colors">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>AOS.init();</script>
 </body>
+
 </html>
